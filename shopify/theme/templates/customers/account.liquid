@@ -1,0 +1,38 @@
+<section class="page">
+  {%- render 'breadcrumbs', trail: 'Account' -%}
+  <div class="wrap phead">
+    <span class="eyebrow">{{ customer.email }}</span>
+    <h1 style="font-size:clamp(2.2rem,5vw,3.2rem)">{{ 'customer.account.title' | t }}</h1>
+  </div>
+  <div class="wrap" style="max-width:860px;padding-bottom:var(--sec)">
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.4rem">
+      <a class="btn" href="{{ routes.account_addresses_url }}">{{ 'customer.account.view_address' | t }}</a>
+      <a class="btn" href="{{ routes.account_logout_url }}">{{ 'layout.customer.log_out' | t }}</a>
+    </div>
+
+    <h3>{{ 'customer.account.orders' | t }}</h3>
+    {%- if customer.orders.size > 0 -%}
+      <table class="acct-table">
+        <thead><tr>
+          <th>{{ 'customer.account.order' | t }}</th><th>{{ 'customer.account.date' | t }}</th>
+          <th>{{ 'customer.account.payment' | t }}</th><th>{{ 'customer.account.fulfillment' | t }}</th>
+          <th>{{ 'customer.account.total' | t }}</th>
+        </tr></thead>
+        <tbody>
+          {%- for order in customer.orders -%}
+            <tr>
+              <td><a class="link" href="{{ order.customer_url }}">{{ order.name }}</a></td>
+              <td>{{ order.created_at | date: '%d %B %Y' }}</td>
+              <td>{{ order.financial_status_label }}</td>
+              <td>{{ order.fulfillment_status_label }}</td>
+              <td>{{ order.total_price | money }}</td>
+            </tr>
+          {%- endfor -%}
+        </tbody>
+      </table>
+    {%- else -%}
+      <p class="small" style="margin-top:1rem">{{ 'customer.account.no_orders' | t }}</p>
+      <p style="margin-top:1.4rem"><a class="btn" href="{{ routes.all_products_collection_url }}">{{ 'layout.cart.start_shopping' | t }}</a></p>
+    {%- endif -%}
+  </div>
+</section>

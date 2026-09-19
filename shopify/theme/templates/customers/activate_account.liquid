@@ -1,0 +1,19 @@
+<section class="page">
+  <div class="wrap" style="max-width:460px;padding-block:clamp(50px,7vw,90px) var(--sec)">
+    <div class="center" style="margin-bottom:2rem">
+      <h1 style="font-size:clamp(1.9rem,4vw,2.6rem)">Activate your account</h1>
+      <p class="small">Choose a password to finish setting up your account.</p>
+    </div>
+    {%- form 'activate_customer_password', novalidate: 'novalidate' -%}
+      {%- if form.errors -%}<div class="form-errors">{{ form.errors | default_errors }}</div>{%- endif -%}
+      <div class="field"><label for="ap">Password</label>
+        <input id="ap" type="password" name="customer[password]" autocomplete="new-password" required></div>
+      <div class="field"><label for="ac">Confirm password</label>
+        <input id="ac" type="password" name="customer[password_confirmation]" autocomplete="new-password" required></div>
+      <button class="btn solid block" type="submit">Activate account</button>
+      <p class="center" style="margin-top:1rem">
+        <button class="link" type="submit" name="decline">Decline invitation</button>
+      </p>
+    {%- endform -%}
+  </div>
+</section>

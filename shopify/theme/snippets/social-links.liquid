@@ -1,0 +1,23 @@
+{%- comment -%} Takes: gold (true tints the icons for the light menu drawer) {%- endcomment -%}
+{%- if settings.instagram_url != blank -%}
+  <a href="{{ settings.instagram_url }}" target="_blank" rel="noopener" aria-label="HANAN on Instagram"
+     {% if gold %}style="border-color:var(--line)"{% endif %}>
+    <svg viewBox="0 0 24 24"{% if gold %} style="stroke:var(--gold)"{% endif %}>
+      <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+      <circle cx="12" cy="12" r="4"></circle>
+      <circle cx="17.4" cy="6.6" r=".9" style="fill:var(--gold-lt);stroke:none"></circle>
+    </svg>
+  </a>
+{%- endif -%}
+{%- unless gold -%}
+  {%- if settings.tiktok_url != blank -%}
+    <a href="{{ settings.tiktok_url }}" target="_blank" rel="noopener" aria-label="HANAN on TikTok">
+      <svg viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3-3.46"></path><path d="M14 5.5c.8 2 2.4 3.2 4.6 3.4"></path></svg>
+    </a>
+  {%- endif -%}
+  {%- if settings.contact_email != blank -%}
+    <a href="mailto:{{ settings.contact_email }}" aria-label="Email HANAN">
+      <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3.5 6.5L12 13l8.5-6.5"></path></svg>
+    </a>
+  {%- endif -%}
+{%- endunless -%}

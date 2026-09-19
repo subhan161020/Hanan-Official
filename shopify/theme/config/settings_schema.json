@@ -1,0 +1,54 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "HANAN",
+    "theme_version": "1.0.0",
+    "theme_author": "HANAN",
+    "theme_documentation_url": "https://github.com/subhan161020/Hanan-Official",
+    "theme_support_url": "https://github.com/subhan161020/Hanan-Official/issues"
+  },
+  {
+    "name": "Brand",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "The palette is fixed in theme.css from the official HANAN colour sheet. These settings cover the images and links that change without a code edit."
+      },
+      { "type": "image_picker", "id": "favicon", "label": "Favicon" },
+      {
+        "type": "url",
+        "id": "instagram_url",
+        "label": "Instagram",
+        "default": "https://www.instagram.com/hanan.tmodesty"
+      },
+      {
+        "type": "url",
+        "id": "tiktok_url",
+        "label": "TikTok",
+        "default": "https://www.tiktok.com/@hanantmodesty"
+      },
+      {
+        "type": "text",
+        "id": "contact_email",
+        "label": "Contact email",
+        "default": "Hanantmodesty@gmail.com"
+      }
+    ]
+  },
+  {
+    "name": "Product swatches",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Colourway swatches read the product metafields custom.swatch_hex and custom.style_group. Create both under Settings → Custom data → Products before importing, or the swatch row falls back to showing nothing."
+      },
+      {
+        "type": "checkbox",
+        "id": "show_placeholder_art",
+        "label": "Show the drawn abaya silhouette where a product has no photograph",
+        "default": true,
+        "info": "Turn this off once every colourway has real photography."
+      }
+    ]
+  }
+]

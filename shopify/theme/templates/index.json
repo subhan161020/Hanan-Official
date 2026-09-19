@@ -1,0 +1,101 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "arabic": "حَنان",
+        "romanised": "Hanan",
+        "part_of_speech": "(noun)",
+        "definition": "Tenderness, compassion, and loving kindness.<br>The gift of a mother’s heart.",
+        "subtitle": "Timeless abayas for every woman, thoughtfully designed with discreet nursing-friendly features and uncompromising elegance.",
+        "cta1_text": "Shop the collections",
+        "cta1_link": "shopify://collections/all",
+        "cta2_text": "Our story",
+        "cta2_link": "shopify://pages/about"
+      }
+    },
+    "story": {
+      "type": "story-video",
+      "settings": {
+        "heading": "The story behind Hanan",
+        "link_text": "Read the full story",
+        "link": "shopify://pages/about",
+        "play_label": "Watch our story"
+      }
+    },
+    "tiles": {
+      "type": "collection-tiles",
+      "blocks": {
+        "everyday": {
+          "type": "tile",
+          "settings": { "heading": "Everyday", "link_text": "Shop everyday", "tile_class": "t1" }
+        },
+        "occasion": {
+          "type": "tile",
+          "settings": { "heading": "Occasion", "link_text": "Shop occasion", "tile_class": "t3" }
+        }
+      },
+      "block_order": ["everyday", "occasion"],
+      "settings": {
+        "eyebrow": "The collections",
+        "heading": "For every day, and every occasion"
+      }
+    },
+    "featured": {
+      "type": "featured-products",
+      "settings": {
+        "eyebrow": "The abayas",
+        "heading": "Three styles, twelve colours",
+        "one_per_style": true,
+        "limit": 4,
+        "cta_text": "View every colour",
+        "cta_link": "shopify://collections/all"
+      }
+    },
+    "details": {
+      "type": "thoughtful-details",
+      "blocks": {
+        "button": {
+          "type": "detail",
+          "settings": {
+            "heading": "Button opening",
+            "body": "A carefully placed press button opening at the top of the abaya allows easy breastfeeding access, while the rest of the abaya remains fully closed for complete coverage.",
+            "bundled_image": "Middle_Button_aligned.webp",
+            "image_alt": "Illustration of the abaya showing a press button opening at the top of the neck, around a quarter of the way down below the chest."
+          }
+        },
+        "zip": {
+          "type": "detail",
+          "settings": {
+            "heading": "Zip fastening",
+            "body": "A discreet zip fastening at the top provides quick and convenient nursing access, thoughtfully incorporated into the design while maintaining the abaya’s elegant silhouette.",
+            "bundled_image": "Middle_Zip_aligned.webp",
+            "image_alt": "Illustration of the abaya showing a zip running down the centre of the neck, around a quarter of the way down below the chest."
+          }
+        },
+        "side": {
+          "type": "detail",
+          "settings": {
+            "heading": "Side chest seams zips",
+            "body": "Subtle openings incorporated into the chest seams on both sides provide easy access for breastfeeding, while keeping the rest of the abaya beautifully closed and modest.",
+            "bundled_image": "Side_Zip_aligned.webp",
+            "image_alt": "Illustration of the abaya showing concealed zips set into the chest seams on either side of the chest."
+          }
+        }
+      },
+      "block_order": ["button", "zip", "side"],
+      "settings": {
+        "heading": "Thoughtful details",
+        "subheading": "Discreet nursing access, designed for you.",
+        "closing_line": "Elegance in every detail",
+        "cta_text": "Shop all abayas",
+        "cta_link": "shopify://collections/all"
+      }
+    },
+    "reviews": {
+      "type": "reviews",
+      "settings": { "enabled": false }
+    }
+  },
+  "order": ["hero", "story", "tiles", "featured", "details", "reviews"]
+}

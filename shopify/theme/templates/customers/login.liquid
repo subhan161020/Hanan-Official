@@ -1,0 +1,37 @@
+<section class="page">
+  <div class="wrap" style="max-width:460px;padding-block:clamp(50px,7vw,90px) var(--sec)">
+    <div class="center" style="margin-bottom:2.4rem">
+      <img src="{{ 'hanan-mark.webp' | asset_url }}" alt="" width="439" height="365"
+           style="width:110px;height:auto;margin:0 auto 1.4rem" aria-hidden="true">
+      <h1 style="font-size:clamp(1.9rem,4vw,2.6rem)">{{ 'customer.login.title' | t }}</h1>
+    </div>
+
+    {%- form 'customer_login', novalidate: 'novalidate' -%}
+      {%- if form.errors -%}<div class="form-errors">{{ form.errors | default_errors }}</div>{%- endif -%}
+      <div class="field">
+        <label for="le">{{ 'customer.login.email' | t }}</label>
+        <input id="le" type="email" name="customer[email]" placeholder="you@example.com" autocomplete="email" required>
+      </div>
+      {%- if form.password_needed -%}
+        <div class="field">
+          <label for="lp">{{ 'customer.login.password' | t }}</label>
+          <input id="lp" type="password" name="customer[password]" autocomplete="current-password" required>
+        </div>
+      {%- endif -%}
+      <button class="btn solid block" type="submit">{{ 'customer.login.submit' | t }}</button>
+    {%- endform -%}
+
+    <p class="small center" style="margin-top:1.2rem">
+      <a class="link" href="{{ routes.account_recover_url }}">{{ 'customer.login.forgot' | t }}</a>
+    </p>
+
+    <div class="rule" style="margin-block:2.4rem"><i class="dot"></i></div>
+    <p class="small center">{{ 'customer.login.new_here' | t }}</p>
+    <p class="small center" style="margin-top:1rem">
+      <a class="link" href="{{ routes.account_register_url }}">{{ 'customer.login.create' | t }}</a>
+    </p>
+    <p class="small center" style="margin-top:1.4rem">
+      <a class="link" href="{{ routes.all_products_collection_url }}">{{ 'customer.login.continue_shopping' | t }}</a>
+    </p>
+  </div>
+</section>

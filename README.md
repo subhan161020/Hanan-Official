@@ -12,6 +12,19 @@ There is no build step and no dependencies to install.
 Routing is hash-based (`#/shop`, `#/about`, …), so every page is served by
 `index.html` and the host never sees a path it has to resolve.
 
+## Moving to Shopify
+
+Work in progress, in `shopify/`: the site rebuilt as a Shopify theme, the
+catalogue as a product import, and the policy texts ready to paste. That is
+where checkout stops being a demo and starts taking money.
+
+Read `shopify/README.md` first — it is the step-by-step, and the steps are
+order-dependent.
+
+Nothing there is live, and this Cloudflare deployment is untouched:
+`.assetsignore` keeps the whole folder off the public site. Leave the Worker
+running until a test order has gone through Shopify end to end.
+
 ## Deploying
 
 Hosted on Cloudflare Workers static assets, the same as the pre-launch site.

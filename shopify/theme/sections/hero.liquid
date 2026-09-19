@@ -1,0 +1,51 @@
+<div class="hero">
+  <img class="hero-mark" src="{{ 'hanan-mark.webp' | asset_url }}" alt="" aria-hidden="true" width="439" height="365">
+  <div class="hero-in">
+    <img class="hero-logo" src="{{ 'hanan-wordmark.webp' | asset_url }}" alt="HANAN — Timeless Modesty" width="559" height="253">
+
+    {%- if section.settings.definition != blank -%}
+      <p class="defn">
+        <b class="ar">{{ section.settings.arabic }}</b> &nbsp;&middot;&nbsp;
+        <b>{{ section.settings.romanised }}</b> <span class="pos">{{ section.settings.part_of_speech }}</span><br>
+        {{ section.settings.definition }} <span class="heart">&#10084;&#65039;</span>
+      </p>
+    {%- endif -%}
+
+    <p class="sub">{{ section.settings.subtitle }}</p>
+
+    <div class="hero-cta">
+      {%- if section.settings.cta1_text != blank -%}
+        <a class="btn" href="{{ section.settings.cta1_link }}">{{ section.settings.cta1_text }}</a>
+      {%- endif -%}
+      {%- if section.settings.cta2_text != blank -%}
+        <a class="btn" href="{{ section.settings.cta2_link }}">{{ section.settings.cta2_text }}</a>
+      {%- endif -%}
+    </div>
+  </div>
+  <div class="scrollcue"><span>Scroll</span><i></i></div>
+</div>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    { "type": "text", "id": "arabic", "label": "Arabic word", "default": "حَنان" },
+    { "type": "text", "id": "romanised", "label": "Romanised", "default": "Hanan" },
+    { "type": "text", "id": "part_of_speech", "label": "Part of speech", "default": "(noun)" },
+    {
+      "type": "html", "id": "definition", "label": "Definition",
+      "info": "The brand thesis. Keep it short.",
+      "default": "Tenderness, compassion, and loving kindness.<br>The gift of a mother’s heart."
+    },
+    {
+      "type": "textarea", "id": "subtitle", "label": "Subtitle",
+      "default": "Timeless abayas for every woman, thoughtfully designed with discreet nursing-friendly features and uncompromising elegance."
+    },
+    { "type": "text", "id": "cta1_text", "label": "Button 1", "default": "Shop the collections" },
+    { "type": "url", "id": "cta1_link", "label": "Button 1 link" },
+    { "type": "text", "id": "cta2_text", "label": "Button 2", "default": "Our story" },
+    { "type": "url", "id": "cta2_link", "label": "Button 2 link" }
+  ],
+  "presets": [{ "name": "Hero" }]
+}
+{% endschema %}

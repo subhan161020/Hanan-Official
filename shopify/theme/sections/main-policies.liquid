@@ -1,0 +1,51 @@
+{%- comment -%}
+  Policies come from Settings → Policies rather than being written into the
+  theme. Those are the versions Shopify links from checkout and is bound by,
+  so keeping one copy avoids the store promising two different things.
+{%- endcomment -%}
+<section class="page">
+  {%- render 'breadcrumbs', trail: 'Policies' -%}
+
+  <div class="wrap phead">
+    <span class="eyebrow">{{ section.settings.eyebrow }}</span>
+    <h1 style="font-size:clamp(2.2rem,5vw,3.6rem)">{{ section.settings.heading }}</h1>
+    <p>{{ section.settings.intro }}</p>
+  </div>
+
+  <div class="wrap" style="max-width:800px;padding-bottom:var(--sec)">
+    {%- assign policies = shop.policies -%}
+    {%- assign any_policy = false -%}
+
+    {%- for policy in policies -%}
+      {%- if policy.body != blank -%}
+        {%- assign any_policy = true -%}
+        <details class="acc"{% if forloop.first %} open{% endif %}>
+          <summary>{{ policy.title }}</summary>
+          <div class="acc-b">{{ policy.body }}</div>
+        </details>
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- unless any_policy -%}
+      <div class="acc-b">
+        <p><strong>No policies published yet.</strong> Write them in the Shopify admin under
+        Settings → Policies. Drafts reflecting UK consumer law are in
+        <code>shopify/policies/</code> in the site repository, ready to paste and have checked.</p>
+      </div>
+    {%- endunless -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Policies",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The small print, in plain English" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Delivery, returns & privacy" },
+    {
+      "type": "textarea", "id": "intro", "label": "Intro",
+      "default": "The policies below are the ones shown at checkout."
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,24 @@
+<section class="page">
+  <div class="wrap" style="max-width:460px;padding-block:clamp(50px,7vw,90px) var(--sec)">
+    <div class="center" style="margin-bottom:2.4rem">
+      <img src="{{ 'hanan-mark.webp' | asset_url }}" alt="" width="439" height="365"
+           style="width:110px;height:auto;margin:0 auto 1.4rem" aria-hidden="true">
+      <h1 style="font-size:clamp(1.9rem,4vw,2.6rem)">{{ 'customer.register.title' | t }}</h1>
+    </div>
+    {%- form 'create_customer', novalidate: 'novalidate' -%}
+      {%- if form.errors -%}<div class="form-errors">{{ form.errors | default_errors }}</div>{%- endif -%}
+      <div class="field"><label for="rf">{{ 'customer.register.first_name' | t }}</label>
+        <input id="rf" name="customer[first_name]" autocomplete="given-name"></div>
+      <div class="field"><label for="rl">{{ 'customer.register.last_name' | t }}</label>
+        <input id="rl" name="customer[last_name]" autocomplete="family-name"></div>
+      <div class="field"><label for="re">{{ 'customer.register.email' | t }}</label>
+        <input id="re" type="email" name="customer[email]" autocomplete="email" required></div>
+      <div class="field"><label for="rp">{{ 'customer.register.password' | t }}</label>
+        <input id="rp" type="password" name="customer[password]" autocomplete="new-password" required></div>
+      <button class="btn solid block" type="submit">{{ 'customer.register.submit' | t }}</button>
+    {%- endform -%}
+    <p class="small center" style="margin-top:1.4rem">
+      {{ 'customer.register.already' | t }} <a class="link" href="{{ routes.account_login_url }}">{{ 'customer.login.title' | t }}</a>
+    </p>
+  </div>
+</section>

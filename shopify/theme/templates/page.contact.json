@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-contact",
+      "blocks": {
+        "b1": { "type": "subject", "settings": { "label": "Sizing help" } },
+        "b2": { "type": "subject", "settings": { "label": "An order" } },
+        "b3": { "type": "subject", "settings": { "label": "Returns and exchanges" } },
+        "b4": { "type": "subject", "settings": { "label": "Restock question" } },
+        "b5": { "type": "subject", "settings": { "label": "Wholesale or collaboration" } },
+        "b6": { "type": "subject", "settings": { "label": "Something else" } }
+      },
+      "block_order": ["b1", "b2", "b3", "b4", "b5", "b6"]
+    }
+  },
+  "order": ["main"]
+}

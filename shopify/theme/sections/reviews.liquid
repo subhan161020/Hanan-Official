@@ -1,0 +1,50 @@
+{%- comment -%}
+  Hidden until there are real, verifiable customer reviews. Publishing
+  invented reviews breaches UK consumer protection law, so this section
+  renders nothing at all until it is enabled in the theme editor AND has
+  blocks with real wording in them.
+{%- endcomment -%}
+{%- if section.settings.enabled and section.blocks.size > 0 -%}
+<section class="sec" style="background:var(--ivory-2);border-block:1px solid var(--line-soft)">
+  <div class="wrap">
+    <div class="center rv" style="margin-bottom:3rem">
+      <span class="eyebrow">{{ section.settings.eyebrow }}</span>
+      <h2>{{ section.settings.heading }}</h2>
+    </div>
+    <div class="quotes rv">
+      {%- for block in section.blocks -%}
+        <div class="quote" {{ block.shopify_attributes }}>
+          <div class="stars">{% for i in (1..block.settings.stars) %}&#9670;{% endfor %}</div>
+          <p>&ldquo;{{ block.settings.quote }}&rdquo;</p>
+          <cite>{{ block.settings.attribution }}</cite>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Reviews",
+  "settings": [
+    {
+      "type": "checkbox", "id": "enabled", "label": "Show this section", "default": false,
+      "info": "Only turn this on once every quote below is a real review from a real customer. Invented reviews are unlawful in the UK."
+    },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Wearers" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "What women tell us" }
+  ],
+  "blocks": [
+    {
+      "type": "quote", "name": "Review",
+      "settings": [
+        { "type": "textarea", "id": "quote", "label": "Review" },
+        { "type": "text", "id": "attribution", "label": "Attribution" },
+        { "type": "range", "id": "stars", "label": "Stars", "min": 1, "max": 5, "step": 1, "default": 5 }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Reviews" }]
+}
+{% endschema %}

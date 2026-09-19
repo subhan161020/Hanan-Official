@@ -1,0 +1,74 @@
+{%- paginate collection.products by 24 -%}
+<section class="page">
+  {%- render 'breadcrumbs', trail: collection.title -%}
+
+  <div class="wrap phead">
+    <span class="eyebrow">{{ section.settings.eyebrow }}</span>
+    <h1 style="font-size:clamp(2.2rem,5vw,3.6rem)">{{ collection.title }}</h1>
+    {%- if collection.description != blank -%}
+      <p>{{ collection.description }}</p>
+    {%- endif -%}
+  </div>
+
+  <div class="wrap">
+    {%- comment -%}
+      The original's filter buttons are real collections here, so each one is
+      a link. Shopify then gets its own URL per collection, which it can index.
+    {%- endcomment -%}
+    {%- if section.settings.filter_menu != blank -%}
+      <div class="filters">
+        {%- for link in linklists[section.settings.filter_menu].links -%}
+          <a href="{{ link.url }}" class="{% if link.active %}on{% endif %}">{{ link.title }}</a>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    <div class="grid">
+      {%- for product in collection.products -%}
+        {%- render 'product-card', product: product -%}
+      {%- else -%}
+        <p class="small">{{ 'collections.general.no_products' | t }}</p>
+      {%- endfor -%}
+    </div>
+
+    {%- if collection.products.size > 0 -%}
+      {%- assign groups = '' -%}
+      {%- assign style_count = 0 -%}
+      {%- for product in collection.products -%}
+        {%- assign group = product.metafields.custom.style_group.value | default: product.id -%}
+        {%- assign marker = '|' | append: group | append: '|' -%}
+        {%- unless groups contains marker -%}
+          {%- assign groups = groups | append: marker -%}
+          {%- assign style_count = style_count | plus: 1 -%}
+        {%- endunless -%}
+      {%- endfor -%}
+      <p class="center small" style="margin-top:3rem">
+        {{ 'collections.general.styles' | t: count: style_count }} ·
+        {{ 'collections.general.count' | t: count: collection.products.size }}
+      </p>
+    {%- endif -%}
+
+    {%- if paginate.pages > 1 -%}
+      <nav class="center" style="margin-top:2.4rem" aria-label="Pagination">
+        {%- if paginate.previous -%}<a class="link" href="{{ paginate.previous.url }}">Previous</a>{%- endif -%}
+        <span class="small" style="margin-inline:1.2rem">Page {{ paginate.current_page }} of {{ paginate.pages }}</span>
+        {%- if paginate.next -%}<a class="link" href="{{ paginate.next.url }}">Next</a>{%- endif -%}
+      </nav>
+    {%- endif -%}
+  </div>
+  <div style="height:var(--sec)"></div>
+</section>
+{%- endpaginate -%}
+
+{% schema %}
+{
+  "name": "Collection",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The collections" },
+    {
+      "type": "link_list", "id": "filter_menu", "label": "Filter menu",
+      "info": "A menu of collection links — All, Everyday, Occasion — shown as the filter row."
+    }
+  ]
+}
+{% endschema %}

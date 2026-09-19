@@ -1,0 +1,22 @@
+<section class="page">
+  {%- render 'breadcrumbs', trail: 'Collections' -%}
+  <div class="wrap phead">
+    <span class="eyebrow">The collections</span>
+    <h1 style="font-size:clamp(2.2rem,5vw,3.6rem)">Collections</h1>
+  </div>
+  <div class="wrap" style="padding-bottom:var(--sec)">
+    <div class="tiles">
+      {%- for collection in collections -%}
+        <a class="tile t1 rv" href="{{ collection.url }}">
+          <div class="tile-in">
+            <h3>{{ collection.title }}</h3>
+            <span class="link">Shop {{ collection.title | downcase }}</span>
+          </div>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+{% schema %}
+{ "name": "Collections list" }
+{% endschema %}

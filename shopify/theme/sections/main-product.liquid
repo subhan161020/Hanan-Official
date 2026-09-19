@@ -1,0 +1,228 @@
+{%- comment -%}
+  Display fields for this product, preferring the metafields the import sets
+  and falling back to the title when they are missing.
+
+  Written out here rather than pulled from a snippet: {% render %} is a closed
+  scope, so variables assigned inside a snippet never reach the caller.
+{%- endcomment -%}
+{%- assign pf_style_name = product.metafields.custom.style_name.value -%}
+{%- assign pf_colour_name = product.metafields.custom.colour_name.value -%}
+{%- if pf_style_name == blank or pf_colour_name == blank -%}
+  {%- assign title_parts = product.title | split: '—' -%}
+  {%- if pf_style_name == blank -%}
+    {%- assign pf_style_name = title_parts[0] | strip -%}
+  {%- endif -%}
+  {%- if pf_colour_name == blank and title_parts.size > 1 -%}
+    {%- assign pf_colour_name = title_parts[1] | strip -%}
+  {%- endif -%}
+{%- endif -%}
+{%- assign pf_swatch_hex = product.metafields.custom.swatch_hex.value | default: '#A18F7A' -%}
+{%- assign pf_style_group = product.metafields.custom.style_group.value -%}
+{%- assign pf_colour_code = product.metafields.custom.colour_code.value -%}
+{%- assign pf_colour_note = product.metafields.custom.colour_note.value -%}
+{%- assign size_page = pages['size-chart'] -%}
+{%- assign collection_name = product.metafields.custom.collection_name.value -%}
+{%- if collection_name == blank -%}
+  {%- for c in product.collections -%}
+    {%- if c.handle == 'everyday' or c.handle == 'occasion' -%}
+      {%- assign collection_name = c.title -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+
+<section class="page">
+  {%- render 'breadcrumbs',
+        parent: 'Shop all', parent_url: routes.all_products_collection_url,
+        trail: pf_style_name -%}
+
+  <div class="wrap" style="padding-bottom:var(--sec)">
+    <div class="pdp">
+
+      <div class="gal">
+        {%- if product.media.size > 0 -%}
+          {%- for media in product.media limit: 6 -%}
+            {%- if forloop.first -%}{%- assign image_loading = 'eager' -%}{%- else -%}{%- assign image_loading = 'lazy' -%}{%- endif -%}
+            <figure {% if forloop.first %}class="g1"{% endif %}>
+              {{ media | image_url: width: 1400 | image_tag:
+                   loading: image_loading,
+                   sizes: '(min-width: 900px) 50vw, 100vw',
+                   widths: '500,700,900,1200,1400',
+                   alt: media.alt | default: product.title | escape }}
+            </figure>
+          {%- endfor -%}
+        {%- else -%}
+          {%- comment -%} No photography yet — the silhouette stands in. {%- endcomment -%}
+          <figure class="g1">
+            <svg viewBox="0 0 200 300" style="fill:{{ pf_swatch_hex }};stroke:#F8F5F0"><use href="#robe"></use></svg>
+            <span class="ph-tag">Photo 1 — full length, front</span>
+          </figure>
+          <figure>
+            <svg viewBox="0 0 200 300" style="fill:{{ pf_swatch_hex }};stroke:#F8F5F0"><use href="#robe"></use></svg>
+            <span class="ph-tag">Photo 2 — worn, moving</span>
+          </figure>
+          <figure>
+            <svg viewBox="0 0 200 300" style="fill:{{ pf_swatch_hex }};stroke:#F8F5F0"><use href="#robe"></use></svg>
+            <span class="ph-tag">Photo 3 — the opening, close up</span>
+          </figure>
+        {%- endif -%}
+      </div>
+
+      <div class="pdp-info">
+        <span class="eyebrow">
+          {{ collection_name | default: product.type }} · {{ 'products.product.nursing_friendly' | t }}
+        </span>
+        <h1 style="font-size:clamp(1.8rem,3.4vw,2.7rem)">{{ pf_style_name }}</h1>
+        <p class="card-col" style="margin-top:.5rem">{{ pf_colour_name }}</p>
+        <p class="price">{{ product.price | money }}</p>
+        <p class="small" style="margin-bottom:1.8rem">{{ 'products.product.tax_note' | t }}</p>
+
+        {%- if product.metafields.custom.intro.value != blank -%}
+          <p class="lede" style="max-width:46ch">{{ product.metafields.custom.intro.value }}</p>
+        {%- endif -%}
+        {%- if pf_colour_note != blank -%}
+          <p style="font-size:.95rem;color:var(--ink-soft);max-width:46ch">{{ pf_colour_note }}</p>
+        {%- endif -%}
+
+        {%- comment -%} ===== colourways ===== {%- endcomment -%}
+        {%- if pf_style_group != blank -%}
+          <label style="margin-top:1.6rem">
+            {{ 'products.product.colour' | t }} — <span id="colName">{{ pf_colour_name }}</span>
+            {%- if pf_colour_code != blank %} <span style="text-transform:none;letter-spacing:.04em">({{ pf_colour_code }})</span>{% endif -%}
+          </label>
+          <div class="cols">
+            {%- render 'sibling-swatches', product: product, style_group: pf_style_group, as_links: true -%}
+          </div>
+        {%- endif -%}
+
+        {%- comment -%} ===== size + add to bag ===== {%- endcomment -%}
+        {%- form 'product', product, id: 'addForm', novalidate: 'novalidate' -%}
+          <label>
+            {{ 'products.product.size' | t }}
+            {%- if size_page != blank -%}
+              <a href="{{ size_page.url }}" style="float:right;text-transform:none;letter-spacing:.04em;border-bottom:1px solid var(--line)">
+                {{ 'products.product.size_chart' | t }}
+              </a>
+            {%- endif -%}
+          </label>
+
+          <div class="sizes" id="sizeRow">
+            {%- for variant in product.variants -%}
+              <input class="size-radio" type="radio" name="id" required
+                     id="variant-{{ variant.id }}" value="{{ variant.id }}"
+                     data-price="{{ variant.price }}"
+                     {% unless variant.available %}disabled{% endunless %}
+                     {% if product.selected_variant and product.selected_variant.id == variant.id %}checked{% endif %}>
+              <label class="size" for="variant-{{ variant.id }}"
+                     {% unless variant.available %}title="{{ 'products.product.sold_out' | t }}"{% endunless %}>
+                {{ variant.title }}
+              </label>
+            {%- endfor -%}
+          </div>
+
+          <p class="small" id="sizeHint" style="margin-bottom:1.6rem">{{ 'products.product.between_sizes' | t }}</p>
+
+          <button class="btn solid block" type="submit" name="add" id="addBtn" style="margin-bottom:.8rem"
+                  {% unless product.available %}disabled{% endunless %}>
+            {%- if product.available -%}
+              {{ 'products.product.add_to_bag' | t }}
+            {%- else -%}
+              {{ 'products.product.sold_out' | t }}
+            {%- endif -%}
+          </button>
+          <p class="small center" style="margin-bottom:2.4rem" id="addMsg">{{ 'products.product.delivery_note' | t }}</p>
+        {%- endform -%}
+
+        {%- comment -%} ===== detail accordions ===== {%- endcomment -%}
+        {%- if product.description != blank -%}
+          <details class="acc" open>
+            <summary>{{ 'products.product.about' | t }}</summary>
+            <div class="acc-b">{{ product.description }}</div>
+          </details>
+        {%- endif -%}
+
+        {%- assign fabric = product.metafields.custom.fabric.value -%}
+        {%- assign care = product.metafields.custom.care.value -%}
+        {%- if fabric != blank or care != blank -%}
+          <details class="acc">
+            <summary>{{ 'products.product.fabric_care' | t }}</summary>
+            <div class="acc-b">
+              {%- if fabric != blank -%}<p>{{ fabric }}.</p>{%- endif -%}
+              {%- if care != blank -%}<p>{{ care }}</p>{%- endif -%}
+            </div>
+          </details>
+        {%- endif -%}
+
+        {%- if product.metafields.custom.fit.value != blank -%}
+          <details class="acc">
+            <summary>{{ 'products.product.fit' | t }}</summary>
+            <div class="acc-b">
+              <p>Sizes 52 to 58. Measured flat: see the full
+                {%- if size_page != blank %} <a href="{{ size_page.url }}" style="border-bottom:1px solid var(--line)">size chart</a>{% else %} size chart{% endif -%}
+                for every size in this style.</p>
+              <p>{{ product.metafields.custom.fit.value }}</p>
+            </div>
+          </details>
+        {%- endif -%}
+
+        {%- if product.metafields.custom.nursing_access.value != blank -%}
+          <details class="acc">
+            <summary>{{ 'products.product.nursing_access' | t }}</summary>
+            <div class="acc-b"><p>{{ product.metafields.custom.nursing_access.value }}</p></div>
+          </details>
+        {%- endif -%}
+
+        <details class="acc">
+          <summary>{{ 'products.product.delivery_returns' | t }}</summary>
+          <div class="acc-b">
+            <p>{{ section.settings.delivery_line }}</p>
+            <p>{{ section.settings.returns_line }}</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%- comment -%} ===== related: one card per other style ===== {%- endcomment -%}
+{%- if section.settings.show_related -%}
+<section class="sec" style="background:var(--ivory-2);border-top:1px solid var(--line-soft)">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:2.6rem">
+      <span class="eyebrow">{{ 'products.product.you_may_also_like' | t }}</span>
+      <h2>{{ 'products.product.more_from' | t }}</h2>
+    </div>
+    <div class="grid g4">
+      {%- assign seen_groups = '' -%}
+      {%- assign shown = 0 -%}
+      {%- for other in collections.all.products -%}
+        {%- if shown >= 4 -%}{%- break -%}{%- endif -%}
+        {%- assign group = other.metafields.custom.style_group.value | default: other.id -%}
+        {%- if group == pf_style_group -%}{%- continue -%}{%- endif -%}
+        {%- assign marker = '|' | append: group | append: '|' -%}
+        {%- if seen_groups contains marker -%}{%- continue -%}{%- endif -%}
+        {%- assign seen_groups = seen_groups | append: marker -%}
+        {%- render 'product-card', product: other -%}
+        {%- assign shown = shown | plus: 1 -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Product",
+  "settings": [
+    { "type": "checkbox", "id": "show_related", "label": "Show \"You may also like\"", "default": true },
+    {
+      "type": "textarea", "id": "delivery_line", "label": "Delivery line",
+      "default": "UK Tracked 48 — £3.95, free over £120. Tracked 24 — £5.95, next working day if ordered before 2pm."
+    },
+    {
+      "type": "textarea", "id": "returns_line", "label": "Returns line",
+      "default": "Return unworn with tags within 30 days. Your legal right to cancel is 14 days from delivery."
+    }
+  ]
+}
+{% endschema %}

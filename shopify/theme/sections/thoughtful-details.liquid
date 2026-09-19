@@ -1,0 +1,84 @@
+<section class="sec feature-art">
+  <div class="wrap">
+    <div class="center rv">
+      <h2 class="art-title"><span>{{ section.settings.heading }}</span></h2>
+      <p class="art-sub">{{ section.settings.subheading }}</p>
+    </div>
+
+    <div class="details rv">
+      {%- for block in section.blocks -%}
+        <article class="detail" {{ block.shopify_attributes }}>
+          <div class="detail-head">
+            <div class="detail-crest">
+              <i></i>
+              <svg class="spark-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.7 6.4 4.9 10.6 12 12-7.1 1.4-11.3 5.6-12 12-.7-6.4-4.9-10.6-12-12C7.1 10.6 11.3 6.4 12 0z"></path></svg>
+              <span class="detail-no">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+              <svg class="spark-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.7 6.4 4.9 10.6 12 12-7.1 1.4-11.3 5.6-12 12-.7-6.4-4.9-10.6-12-12C7.1 10.6 11.3 6.4 12 0z"></path></svg>
+              <i></i>
+            </div>
+            <h3>{{ block.settings.heading }}</h3>
+            <p>{{ block.settings.body }}</p>
+          </div>
+          {%- if block.settings.image != blank -%}
+            {{ block.settings.image | image_url: width: 1024 | image_tag:
+                 class: 'detail-art', loading: 'lazy', decoding: 'async',
+                 alt: block.settings.image_alt | escape }}
+          {%- elsif block.settings.bundled_image != blank -%}
+            <img class="detail-art" src="{{ block.settings.bundled_image | asset_url }}"
+                 width="1024" height="1031" loading="lazy" decoding="async"
+                 alt="{{ block.settings.image_alt | escape }}">
+          {%- endif -%}
+        </article>
+      {%- endfor -%}
+    </div>
+
+    <div class="center rv art-foot">
+      <svg class="spark" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 0c.7 6.4 4.9 10.6 12 12-7.1 1.4-11.3 5.6-12 12-.7-6.4-4.9-10.6-12-12C7.1 10.6 11.3 6.4 12 0z"></path>
+      </svg>
+      <p class="art-close"><span>{{ section.settings.closing_line }}</span></p>
+      {%- if section.settings.cta_text != blank -%}
+        <a class="btn" href="{{ section.settings.cta_link | default: routes.all_products_collection_url }}" style="margin-top:2.6rem">
+          {{ section.settings.cta_text }}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Thoughtful details",
+  "max_blocks": 6,
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Thoughtful details" },
+    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Discreet nursing access, designed for you." },
+    { "type": "text", "id": "closing_line", "label": "Closing line", "default": "Elegance in every detail" },
+    { "type": "text", "id": "cta_text", "label": "Button", "default": "Shop all abayas" },
+    { "type": "url", "id": "cta_link", "label": "Button link" }
+  ],
+  "blocks": [
+    {
+      "type": "detail", "name": "Detail",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading" },
+        { "type": "textarea", "id": "body", "label": "Body" },
+        { "type": "image_picker", "id": "image", "label": "Illustration" },
+        {
+          "type": "text", "id": "bundled_image", "label": "Bundled illustration filename",
+          "info": "Used when no image is chosen above. The theme ships Middle_Button_aligned.webp, Middle_Zip_aligned.webp and Side_Zip_aligned.webp."
+        },
+        { "type": "textarea", "id": "image_alt", "label": "Illustration alt text" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Thoughtful details",
+      "blocks": [
+        { "type": "detail" }, { "type": "detail" }, { "type": "detail" }
+      ]
+    }
+  ]
+}
+{% endschema %}

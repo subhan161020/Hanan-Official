@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-size-chart",
+      "blocks": {
+        "s52": { "type": "row", "settings": { "size": "52", "height": "4'11\" – 5'1\"", "length": "52 in / 132 cm", "bust": "58 in / 147 cm", "sleeve": "23 in", "uk_dress": "6 – 12" } },
+        "s54": { "type": "row", "settings": { "size": "54", "height": "5'1\" – 5'3\"", "length": "54 in / 137 cm", "bust": "58 in / 147 cm", "sleeve": "23.5 in", "uk_dress": "6 – 14" } },
+        "s56": { "type": "row", "settings": { "size": "56", "height": "5'3\" – 5'5\"", "length": "56 in / 142 cm", "bust": "60 in / 152 cm", "sleeve": "24 in", "uk_dress": "8 – 16" } },
+        "s58": { "type": "row", "settings": { "size": "58", "height": "5'5\" – 5'8\"", "length": "58 in / 147 cm", "bust": "62 in / 157 cm", "sleeve": "24.5 in", "uk_dress": "10 – 18" } }
+      },
+      "block_order": ["s52", "s54", "s56", "s58"]
+    }
+  },
+  "order": ["main"]
+}

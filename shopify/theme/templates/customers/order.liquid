@@ -1,0 +1,27 @@
+<section class="page">
+  {%- render 'breadcrumbs', parent: 'Account', parent_url: routes.account_url, trail: order.name -%}
+  <div class="wrap phead">
+    <span class="eyebrow">{{ 'customer.order.placed' | t: date: order.created_at | date: '%d %B %Y' }}</span>
+    <h1 style="font-size:clamp(2rem,4vw,2.8rem)">{{ 'customer.order.title' | t: name: order.name }}</h1>
+  </div>
+  <div class="wrap" style="max-width:860px;padding-bottom:var(--sec)">
+    <table class="acct-table">
+      <thead><tr><th>Item</th><th>Size</th><th>Qty</th><th>Total</th></tr></thead>
+      <tbody>
+        {%- for line in order.line_items -%}
+          <tr>
+            <td>{{ line.product.metafields.custom.style_name.value | default: line.title }}</td>
+            <td>{{ line.variant.title }}</td>
+            <td>{{ line.quantity }}</td>
+            <td>{{ line.final_line_price | money }}</td>
+          </tr>
+        {%- endfor -%}
+      </tbody>
+    </table>
+    <div class="bag-row" style="margin-top:1.6rem"><span>Subtotal</span><span>{{ order.subtotal_price | money }}</span></div>
+    {%- for shipping in order.shipping_methods -%}
+      <div class="bag-row"><span>{{ shipping.title }}</span><span>{{ shipping.price | money }}</span></div>
+    {%- endfor -%}
+    <div class="bag-row" style="font-size:1.1rem"><span>{{ 'customer.account.total' | t }}</span><span>{{ order.total_price | money }}</span></div>
+  </div>
+</section>

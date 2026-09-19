@@ -1,0 +1,16 @@
+<section class="page">
+  {%- render 'breadcrumbs', parent: 'Account', parent_url: routes.account_url, trail: 'Addresses' -%}
+  <div class="wrap phead">
+    <h1 style="font-size:clamp(2rem,4vw,2.8rem)">{{ 'customer.account.addresses' | t }}</h1>
+  </div>
+  <div class="wrap" style="max-width:720px;padding-bottom:var(--sec)">
+    {%- for address in customer.addresses -%}
+      <div style="padding-block:1.4rem;border-bottom:1px solid var(--line-soft)">
+        {{ address | format_address }}
+      </div>
+    {%- else -%}
+      <p class="small">No addresses saved yet. One is added when you place your first order.</p>
+    {%- endfor -%}
+    <p style="margin-top:2rem"><a class="btn" href="{{ routes.account_url }}">Back to your account</a></p>
+  </div>
+</section>

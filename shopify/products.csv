@@ -1,229 +1,85 @@
-Handle,Title,Body (HTML),Vendor,Product Category,Type,Tags,Published,Option1 Name,Option1 Value,Variant SKU,Variant Grams,Variant Inventory Tracker,Variant Inventory Qty,Variant Inventory Policy,Variant Fulfillment Service,Variant Price,Variant Compare At Price,Variant Requires Shipping,Variant Taxable,Image Src,Image Position,Image Alt Text,Gift Card,SEO Title,SEO Description,Variant Weight Unit,Status
-riwa-mushroom-taupe,Riwa Linen Abaya — Mushroom Taupe,"<p>Effortlessly elegant and designed with everyday comfort in mind, combining a relaxed silhouette with thoughtful details for the modern woman.</p>
-<p>Crafted from a quality linen fabric, this closed abaya features a discreet breastfeeding zip, making it practical while maintaining a modest and polished look.</p>
+Handle,Title,Body (HTML),Vendor,Product Category,Type,Tags,Published,Option1 Name,Option1 Value,Variant SKU,Variant Grams,Variant Inventory Tracker,Variant Inventory Qty,Variant Inventory Policy,Variant Fulfillment Service,Variant Price,Variant Compare At Price,Variant Requires Shipping,Variant Taxable,Image Src,Image Position,Image Alt Text,Gift Card,SEO Title,SEO Description,Variant Weight Unit,Status,Metafield: custom.style_group [single_line_text_field],Metafield: custom.style_name [single_line_text_field],Metafield: custom.colour_name [single_line_text_field],Metafield: custom.colour_code [single_line_text_field],Metafield: custom.swatch_hex [single_line_text_field],Metafield: custom.colour_note [multi_line_text_field],Metafield: custom.intro [multi_line_text_field],Metafield: custom.fabric [single_line_text_field],Metafield: custom.care [multi_line_text_field],Metafield: custom.fit [multi_line_text_field],Metafield: custom.nursing_access [multi_line_text_field]
+riwa-mushroom-taupe,Riwa Linen Abaya — Mushroom Taupe,"<p>Crafted from a quality linen fabric, this closed abaya features a discreet breastfeeding zip, making it practical while maintaining a modest and polished look.</p>
 <p>The sleeves are finished with a stylish slit detail and adjustable tie ropes, complemented by delicate beadwork matching the abaya colour for an understated touch of luxury.</p>
 <p>Designed with convenience in mind, the abaya includes hidden side pockets, while our signature gold metal brand tag and branded fabric label add a refined finishing touch.</p>
-<h4>Colour</h4>
-<p><strong>Mushroom Taupe</strong> — Warm muted taupe with a soft brown-grey undertone.</p>
-<h4>Nursing access</h4>
-<p>A discreet breastfeeding zip set into the front of the abaya. Closed, it reads as part of the design; open, it gives you room to feed without undressing.</p>
-<h4>Fit</h4>
-<p>Loose through the body, closed front, full-length slit sleeve with adjustable tie ropes.</p>
-<h4>Details</h4>
-<ul><li>Premium linen fabric</li><li>Closed abaya design</li><li>Discreet breastfeeding zip</li><li>Slit sleeves with adjustable tie ropes</li><li>Matching beadwork on sleeves</li><li>Hidden side pockets</li><li>Gold metal brand tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>
-<h4>Fabric</h4>
-<p>Premium linen</p>
-<h4>Care</h4>
-<p>Cool machine wash at 30°, inside out, with similar colours. Cool iron on the reverse. Do not tumble dry.</p>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"everyday, nursing access, breastfeeding abaya, Riwa Linen Abaya, Mushroom Taupe",FALSE,Size,52,RIWA-MUSHROOM-TAUPE-52,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,FALSE,Riwa Linen Abaya in Mushroom Taupe | Nursing Abaya | HANAN,"Effortlessly elegant and designed with everyday comfort in mind, combining a relaxed silhouette with thoughtful details for the modern woman. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft
-riwa-mushroom-taupe,,,,,,,,Size,54,RIWA-MUSHROOM-TAUPE-54,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,
-riwa-mushroom-taupe,,,,,,,,Size,56,RIWA-MUSHROOM-TAUPE-56,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,
-riwa-mushroom-taupe,,,,,,,,Size,58,RIWA-MUSHROOM-TAUPE-58,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,
-riwa-sage-mist,Riwa Linen Abaya — Sage Mist,"<p>Effortlessly elegant and designed with everyday comfort in mind, combining a relaxed silhouette with thoughtful details for the modern woman.</p>
-<p>Crafted from a quality linen fabric, this closed abaya features a discreet breastfeeding zip, making it practical while maintaining a modest and polished look.</p>
+<ul><li>Premium linen fabric</li><li>Closed abaya design</li><li>Discreet breastfeeding zip</li><li>Slit sleeves with adjustable tie ropes</li><li>Matching beadwork on sleeves</li><li>Hidden side pockets</li><li>Gold metal brand tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"everyday, nursing access, breastfeeding abaya, Riwa Linen Abaya, Mushroom Taupe",FALSE,Size,52,RIWA-MUSHROOM-TAUPE-52,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,FALSE,Riwa Linen Abaya in Mushroom Taupe | Nursing Abaya | HANAN,"Effortlessly elegant and designed with everyday comfort in mind, combining a relaxed silhouette with thoughtful details for the modern woman. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft,riwa,Riwa Linen Abaya,Mushroom Taupe,19,#9C8B7D,Warm muted taupe with a soft brown-grey undertone.,"Effortlessly elegant and designed with everyday comfort in mind, combining a relaxed silhouette with thoughtful details for the modern woman.",Premium linen,"Cool machine wash at 30°, inside out, with similar colours. Cool iron on the reverse. Do not tumble dry.","Loose through the body, closed front, full-length slit sleeve with adjustable tie ropes.","A discreet breastfeeding zip set into the front of the abaya. Closed, it reads as part of the design; open, it gives you room to feed without undressing."
+riwa-mushroom-taupe,,,,,,,,Size,54,RIWA-MUSHROOM-TAUPE-54,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+riwa-mushroom-taupe,,,,,,,,Size,56,RIWA-MUSHROOM-TAUPE-56,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+riwa-mushroom-taupe,,,,,,,,Size,58,RIWA-MUSHROOM-TAUPE-58,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+riwa-sage-mist,Riwa Linen Abaya — Sage Mist,"<p>Crafted from a quality linen fabric, this closed abaya features a discreet breastfeeding zip, making it practical while maintaining a modest and polished look.</p>
 <p>The sleeves are finished with a stylish slit detail and adjustable tie ropes, complemented by delicate beadwork matching the abaya colour for an understated touch of luxury.</p>
 <p>Designed with convenience in mind, the abaya includes hidden side pockets, while our signature gold metal brand tag and branded fabric label add a refined finishing touch.</p>
-<h4>Colour</h4>
-<p><strong>Sage Mist</strong> — Muted sage green with a cool, grey undertone.</p>
-<h4>Nursing access</h4>
-<p>A discreet breastfeeding zip set into the front of the abaya. Closed, it reads as part of the design; open, it gives you room to feed without undressing.</p>
-<h4>Fit</h4>
-<p>Loose through the body, closed front, full-length slit sleeve with adjustable tie ropes.</p>
-<h4>Details</h4>
-<ul><li>Premium linen fabric</li><li>Closed abaya design</li><li>Discreet breastfeeding zip</li><li>Slit sleeves with adjustable tie ropes</li><li>Matching beadwork on sleeves</li><li>Hidden side pockets</li><li>Gold metal brand tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>
-<h4>Fabric</h4>
-<p>Premium linen</p>
-<h4>Care</h4>
-<p>Cool machine wash at 30°, inside out, with similar colours. Cool iron on the reverse. Do not tumble dry.</p>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"everyday, nursing access, breastfeeding abaya, Riwa Linen Abaya, Sage Mist",FALSE,Size,52,RIWA-SAGE-MIST-52,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,FALSE,Riwa Linen Abaya in Sage Mist | Nursing Abaya | HANAN,"Effortlessly elegant and designed with everyday comfort in mind, combining a relaxed silhouette with thoughtful details for the modern woman. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft
-riwa-sage-mist,,,,,,,,Size,54,RIWA-SAGE-MIST-54,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,
-riwa-sage-mist,,,,,,,,Size,56,RIWA-SAGE-MIST-56,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,
-riwa-sage-mist,,,,,,,,Size,58,RIWA-SAGE-MIST-58,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,
-riwa-dusty-blue,Riwa Linen Abaya — Dusty Blue,"<p>Effortlessly elegant and designed with everyday comfort in mind, combining a relaxed silhouette with thoughtful details for the modern woman.</p>
-<p>Crafted from a quality linen fabric, this closed abaya features a discreet breastfeeding zip, making it practical while maintaining a modest and polished look.</p>
+<ul><li>Premium linen fabric</li><li>Closed abaya design</li><li>Discreet breastfeeding zip</li><li>Slit sleeves with adjustable tie ropes</li><li>Matching beadwork on sleeves</li><li>Hidden side pockets</li><li>Gold metal brand tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"everyday, nursing access, breastfeeding abaya, Riwa Linen Abaya, Sage Mist",FALSE,Size,52,RIWA-SAGE-MIST-52,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,FALSE,Riwa Linen Abaya in Sage Mist | Nursing Abaya | HANAN,"Effortlessly elegant and designed with everyday comfort in mind, combining a relaxed silhouette with thoughtful details for the modern woman. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft,riwa,Riwa Linen Abaya,Sage Mist,22,#9AA694,"Muted sage green with a cool, grey undertone.","Effortlessly elegant and designed with everyday comfort in mind, combining a relaxed silhouette with thoughtful details for the modern woman.",Premium linen,"Cool machine wash at 30°, inside out, with similar colours. Cool iron on the reverse. Do not tumble dry.","Loose through the body, closed front, full-length slit sleeve with adjustable tie ropes.","A discreet breastfeeding zip set into the front of the abaya. Closed, it reads as part of the design; open, it gives you room to feed without undressing."
+riwa-sage-mist,,,,,,,,Size,54,RIWA-SAGE-MIST-54,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+riwa-sage-mist,,,,,,,,Size,56,RIWA-SAGE-MIST-56,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+riwa-sage-mist,,,,,,,,Size,58,RIWA-SAGE-MIST-58,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+riwa-dusty-blue,Riwa Linen Abaya — Dusty Blue,"<p>Crafted from a quality linen fabric, this closed abaya features a discreet breastfeeding zip, making it practical while maintaining a modest and polished look.</p>
 <p>The sleeves are finished with a stylish slit detail and adjustable tie ropes, complemented by delicate beadwork matching the abaya colour for an understated touch of luxury.</p>
 <p>Designed with convenience in mind, the abaya includes hidden side pockets, while our signature gold metal brand tag and branded fabric label add a refined finishing touch.</p>
-<h4>Colour</h4>
-<p><strong>Dusty Blue</strong> — Soft muted blue with a slightly grey undertone.</p>
-<h4>Nursing access</h4>
-<p>A discreet breastfeeding zip set into the front of the abaya. Closed, it reads as part of the design; open, it gives you room to feed without undressing.</p>
-<h4>Fit</h4>
-<p>Loose through the body, closed front, full-length slit sleeve with adjustable tie ropes.</p>
-<h4>Details</h4>
-<ul><li>Premium linen fabric</li><li>Closed abaya design</li><li>Discreet breastfeeding zip</li><li>Slit sleeves with adjustable tie ropes</li><li>Matching beadwork on sleeves</li><li>Hidden side pockets</li><li>Gold metal brand tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>
-<h4>Fabric</h4>
-<p>Premium linen</p>
-<h4>Care</h4>
-<p>Cool machine wash at 30°, inside out, with similar colours. Cool iron on the reverse. Do not tumble dry.</p>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"everyday, nursing access, breastfeeding abaya, Riwa Linen Abaya, Dusty Blue",FALSE,Size,52,RIWA-DUSTY-BLUE-52,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,FALSE,Riwa Linen Abaya in Dusty Blue | Nursing Abaya | HANAN,"Effortlessly elegant and designed with everyday comfort in mind, combining a relaxed silhouette with thoughtful details for the modern woman. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft
-riwa-dusty-blue,,,,,,,,Size,54,RIWA-DUSTY-BLUE-54,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,
-riwa-dusty-blue,,,,,,,,Size,56,RIWA-DUSTY-BLUE-56,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,
-riwa-dusty-blue,,,,,,,,Size,58,RIWA-DUSTY-BLUE-58,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,
-riwa-stone-grey,Riwa Linen Abaya — Stone Grey,"<p>Effortlessly elegant and designed with everyday comfort in mind, combining a relaxed silhouette with thoughtful details for the modern woman.</p>
-<p>Crafted from a quality linen fabric, this closed abaya features a discreet breastfeeding zip, making it practical while maintaining a modest and polished look.</p>
+<ul><li>Premium linen fabric</li><li>Closed abaya design</li><li>Discreet breastfeeding zip</li><li>Slit sleeves with adjustable tie ropes</li><li>Matching beadwork on sleeves</li><li>Hidden side pockets</li><li>Gold metal brand tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"everyday, nursing access, breastfeeding abaya, Riwa Linen Abaya, Dusty Blue",FALSE,Size,52,RIWA-DUSTY-BLUE-52,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,FALSE,Riwa Linen Abaya in Dusty Blue | Nursing Abaya | HANAN,"Effortlessly elegant and designed with everyday comfort in mind, combining a relaxed silhouette with thoughtful details for the modern woman. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft,riwa,Riwa Linen Abaya,Dusty Blue,32,#8C9CAB,Soft muted blue with a slightly grey undertone.,"Effortlessly elegant and designed with everyday comfort in mind, combining a relaxed silhouette with thoughtful details for the modern woman.",Premium linen,"Cool machine wash at 30°, inside out, with similar colours. Cool iron on the reverse. Do not tumble dry.","Loose through the body, closed front, full-length slit sleeve with adjustable tie ropes.","A discreet breastfeeding zip set into the front of the abaya. Closed, it reads as part of the design; open, it gives you room to feed without undressing."
+riwa-dusty-blue,,,,,,,,Size,54,RIWA-DUSTY-BLUE-54,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+riwa-dusty-blue,,,,,,,,Size,56,RIWA-DUSTY-BLUE-56,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+riwa-dusty-blue,,,,,,,,Size,58,RIWA-DUSTY-BLUE-58,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+riwa-stone-grey,Riwa Linen Abaya — Stone Grey,"<p>Crafted from a quality linen fabric, this closed abaya features a discreet breastfeeding zip, making it practical while maintaining a modest and polished look.</p>
 <p>The sleeves are finished with a stylish slit detail and adjustable tie ropes, complemented by delicate beadwork matching the abaya colour for an understated touch of luxury.</p>
 <p>Designed with convenience in mind, the abaya includes hidden side pockets, while our signature gold metal brand tag and branded fabric label add a refined finishing touch.</p>
-<h4>Colour</h4>
-<p><strong>Stone Grey</strong> — Elegant medium grey with a natural, earthy tone.</p>
-<h4>Nursing access</h4>
-<p>A discreet breastfeeding zip set into the front of the abaya. Closed, it reads as part of the design; open, it gives you room to feed without undressing.</p>
-<h4>Fit</h4>
-<p>Loose through the body, closed front, full-length slit sleeve with adjustable tie ropes.</p>
-<h4>Details</h4>
-<ul><li>Premium linen fabric</li><li>Closed abaya design</li><li>Discreet breastfeeding zip</li><li>Slit sleeves with adjustable tie ropes</li><li>Matching beadwork on sleeves</li><li>Hidden side pockets</li><li>Gold metal brand tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>
-<h4>Fabric</h4>
-<p>Premium linen</p>
-<h4>Care</h4>
-<p>Cool machine wash at 30°, inside out, with similar colours. Cool iron on the reverse. Do not tumble dry.</p>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"everyday, nursing access, breastfeeding abaya, Riwa Linen Abaya, Stone Grey",FALSE,Size,52,RIWA-STONE-GREY-52,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,FALSE,Riwa Linen Abaya in Stone Grey | Nursing Abaya | HANAN,"Effortlessly elegant and designed with everyday comfort in mind, combining a relaxed silhouette with thoughtful details for the modern woman. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft
-riwa-stone-grey,,,,,,,,Size,54,RIWA-STONE-GREY-54,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,
-riwa-stone-grey,,,,,,,,Size,56,RIWA-STONE-GREY-56,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,
-riwa-stone-grey,,,,,,,,Size,58,RIWA-STONE-GREY-58,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,
-raya-pearl-frost,Raya Tweed Abaya — Pearl Frost,"<p>A statement of refined elegance, bringing timeless sophistication to modest dressing.</p>
-<p>Crafted in a luxurious textured tweed, this closed abaya combines a graceful silhouette with delicate feminine detailing.</p>
+<ul><li>Premium linen fabric</li><li>Closed abaya design</li><li>Discreet breastfeeding zip</li><li>Slit sleeves with adjustable tie ropes</li><li>Matching beadwork on sleeves</li><li>Hidden side pockets</li><li>Gold metal brand tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"everyday, nursing access, breastfeeding abaya, Riwa Linen Abaya, Stone Grey",FALSE,Size,52,RIWA-STONE-GREY-52,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,FALSE,Riwa Linen Abaya in Stone Grey | Nursing Abaya | HANAN,"Effortlessly elegant and designed with everyday comfort in mind, combining a relaxed silhouette with thoughtful details for the modern woman. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft,riwa,Riwa Linen Abaya,Stone Grey,38,#8A8A88,"Elegant medium grey with a natural, earthy tone.","Effortlessly elegant and designed with everyday comfort in mind, combining a relaxed silhouette with thoughtful details for the modern woman.",Premium linen,"Cool machine wash at 30°, inside out, with similar colours. Cool iron on the reverse. Do not tumble dry.","Loose through the body, closed front, full-length slit sleeve with adjustable tie ropes.","A discreet breastfeeding zip set into the front of the abaya. Closed, it reads as part of the design; open, it gives you room to feed without undressing."
+riwa-stone-grey,,,,,,,,Size,54,RIWA-STONE-GREY-54,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+riwa-stone-grey,,,,,,,,Size,56,RIWA-STONE-GREY-56,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+riwa-stone-grey,,,,,,,,Size,58,RIWA-STONE-GREY-58,0,shopify,0,deny,manual,75.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+raya-pearl-frost,Raya Tweed Abaya — Pearl Frost,"<p>Crafted in a luxurious textured tweed, this closed abaya combines a graceful silhouette with delicate feminine detailing.</p>
 <p>The standout feature is the feather ruffle detailing, framing the sleeves and flowing down the centre of the abaya for a soft yet striking finish.</p>
 <p>Practicality is thoughtfully incorporated through hidden side pockets, while the finishing touches include a signature gold metal Hanan tag and branded fabric label.</p>
-<h4>Colour</h4>
-<p><strong>Pearl Frost</strong> — Soft ivory-white tweed with delicate blue detailing.</p>
-<h4>Nursing access</h4>
-<p>Four discreet snap buttons give comfortable breastfeeding access, and keep the abaya elegantly closed when they are not in use.</p>
-<h4>Fit</h4>
-<p>Loose through the body, closed front, feather ruffle sleeve.</p>
-<h4>Details</h4>
-<ul><li>Closed abaya</li><li>Discreet breastfeeding access with 4 snap buttons</li><li>Feather ruffle sleeves</li><li>Feather ruffle detailing down the centre</li><li>Hidden side pockets</li><li>Gold metal Hanan tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>
-<h4>Fabric</h4>
-<p>Textured tweed</p>
-<h4>Care</h4>
-<p>Dry clean recommended to protect the feather ruffle detailing. Do not tumble dry.</p>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"everyday, nursing access, breastfeeding abaya, Raya Tweed Abaya, Pearl Frost",FALSE,Size,52,RAYA-PEARL-FROST-52,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,FALSE,Raya Tweed Abaya in Pearl Frost | Nursing Abaya | HANAN,"A statement of refined elegance, bringing timeless sophistication to modest dressing. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft
-raya-pearl-frost,,,,,,,,Size,54,RAYA-PEARL-FROST-54,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,
-raya-pearl-frost,,,,,,,,Size,56,RAYA-PEARL-FROST-56,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,
-raya-pearl-frost,,,,,,,,Size,58,RAYA-PEARL-FROST-58,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,
-raya-onyx-weave,Raya Tweed Abaya — Onyx Weave,"<p>A statement of refined elegance, bringing timeless sophistication to modest dressing.</p>
-<p>Crafted in a luxurious textured tweed, this closed abaya combines a graceful silhouette with delicate feminine detailing.</p>
+<ul><li>Closed abaya</li><li>Discreet breastfeeding access with 4 snap buttons</li><li>Feather ruffle sleeves</li><li>Feather ruffle detailing down the centre</li><li>Hidden side pockets</li><li>Gold metal Hanan tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"everyday, nursing access, breastfeeding abaya, Raya Tweed Abaya, Pearl Frost",FALSE,Size,52,RAYA-PEARL-FROST-52,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,FALSE,Raya Tweed Abaya in Pearl Frost | Nursing Abaya | HANAN,"A statement of refined elegance, bringing timeless sophistication to modest dressing. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft,raya,Raya Tweed Abaya,Pearl Frost,White / Blue,#DCE0E6,Soft ivory-white tweed with delicate blue detailing.,"A statement of refined elegance, bringing timeless sophistication to modest dressing.",Textured tweed,Dry clean recommended to protect the feather ruffle detailing. Do not tumble dry.,"Loose through the body, closed front, feather ruffle sleeve.","Four discreet snap buttons give comfortable breastfeeding access, and keep the abaya elegantly closed when they are not in use."
+raya-pearl-frost,,,,,,,,Size,54,RAYA-PEARL-FROST-54,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+raya-pearl-frost,,,,,,,,Size,56,RAYA-PEARL-FROST-56,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+raya-pearl-frost,,,,,,,,Size,58,RAYA-PEARL-FROST-58,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+raya-onyx-weave,Raya Tweed Abaya — Onyx Weave,"<p>Crafted in a luxurious textured tweed, this closed abaya combines a graceful silhouette with delicate feminine detailing.</p>
 <p>The standout feature is the feather ruffle detailing, framing the sleeves and flowing down the centre of the abaya for a soft yet striking finish.</p>
 <p>Practicality is thoughtfully incorporated through hidden side pockets, while the finishing touches include a signature gold metal Hanan tag and branded fabric label.</p>
-<h4>Colour</h4>
-<p><strong>Onyx Weave</strong> — Deep black textured tweed with subtle woven detailing.</p>
-<h4>Nursing access</h4>
-<p>Four discreet snap buttons give comfortable breastfeeding access, and keep the abaya elegantly closed when they are not in use.</p>
-<h4>Fit</h4>
-<p>Loose through the body, closed front, feather ruffle sleeve.</p>
-<h4>Details</h4>
-<ul><li>Closed abaya</li><li>Discreet breastfeeding access with 4 snap buttons</li><li>Feather ruffle sleeves</li><li>Feather ruffle detailing down the centre</li><li>Hidden side pockets</li><li>Gold metal Hanan tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>
-<h4>Fabric</h4>
-<p>Textured tweed</p>
-<h4>Care</h4>
-<p>Dry clean recommended to protect the feather ruffle detailing. Do not tumble dry.</p>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"everyday, nursing access, breastfeeding abaya, Raya Tweed Abaya, Onyx Weave",FALSE,Size,52,RAYA-ONYX-WEAVE-52,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,FALSE,Raya Tweed Abaya in Onyx Weave | Nursing Abaya | HANAN,"A statement of refined elegance, bringing timeless sophistication to modest dressing. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft
-raya-onyx-weave,,,,,,,,Size,54,RAYA-ONYX-WEAVE-54,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,
-raya-onyx-weave,,,,,,,,Size,56,RAYA-ONYX-WEAVE-56,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,
-raya-onyx-weave,,,,,,,,Size,58,RAYA-ONYX-WEAVE-58,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,
-raya-ivory-boucle,Raya Tweed Abaya — Ivory Bouclé,"<p>A statement of refined elegance, bringing timeless sophistication to modest dressing.</p>
-<p>Crafted in a luxurious textured tweed, this closed abaya combines a graceful silhouette with delicate feminine detailing.</p>
+<ul><li>Closed abaya</li><li>Discreet breastfeeding access with 4 snap buttons</li><li>Feather ruffle sleeves</li><li>Feather ruffle detailing down the centre</li><li>Hidden side pockets</li><li>Gold metal Hanan tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"everyday, nursing access, breastfeeding abaya, Raya Tweed Abaya, Onyx Weave",FALSE,Size,52,RAYA-ONYX-WEAVE-52,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,FALSE,Raya Tweed Abaya in Onyx Weave | Nursing Abaya | HANAN,"A statement of refined elegance, bringing timeless sophistication to modest dressing. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft,raya,Raya Tweed Abaya,Onyx Weave,Black,#221F1F,Deep black textured tweed with subtle woven detailing.,"A statement of refined elegance, bringing timeless sophistication to modest dressing.",Textured tweed,Dry clean recommended to protect the feather ruffle detailing. Do not tumble dry.,"Loose through the body, closed front, feather ruffle sleeve.","Four discreet snap buttons give comfortable breastfeeding access, and keep the abaya elegantly closed when they are not in use."
+raya-onyx-weave,,,,,,,,Size,54,RAYA-ONYX-WEAVE-54,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+raya-onyx-weave,,,,,,,,Size,56,RAYA-ONYX-WEAVE-56,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+raya-onyx-weave,,,,,,,,Size,58,RAYA-ONYX-WEAVE-58,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+raya-ivory-boucle,Raya Tweed Abaya — Ivory Bouclé,"<p>Crafted in a luxurious textured tweed, this closed abaya combines a graceful silhouette with delicate feminine detailing.</p>
 <p>The standout feature is the feather ruffle detailing, framing the sleeves and flowing down the centre of the abaya for a soft yet striking finish.</p>
 <p>Practicality is thoughtfully incorporated through hidden side pockets, while the finishing touches include a signature gold metal Hanan tag and branded fabric label.</p>
-<h4>Colour</h4>
-<p><strong>Ivory Bouclé</strong> — Warm ivory-cream with a soft, textured bouclé appearance.</p>
-<h4>Nursing access</h4>
-<p>Four discreet snap buttons give comfortable breastfeeding access, and keep the abaya elegantly closed when they are not in use.</p>
-<h4>Fit</h4>
-<p>Loose through the body, closed front, feather ruffle sleeve.</p>
-<h4>Details</h4>
-<ul><li>Closed abaya</li><li>Discreet breastfeeding access with 4 snap buttons</li><li>Feather ruffle sleeves</li><li>Feather ruffle detailing down the centre</li><li>Hidden side pockets</li><li>Gold metal Hanan tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>
-<h4>Fabric</h4>
-<p>Textured tweed</p>
-<h4>Care</h4>
-<p>Dry clean recommended to protect the feather ruffle detailing. Do not tumble dry.</p>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"everyday, nursing access, breastfeeding abaya, Raya Tweed Abaya, Ivory Bouclé",FALSE,Size,52,RAYA-IVORY-BOUCLE-52,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,FALSE,Raya Tweed Abaya in Ivory Bouclé | Nursing Abaya | HANAN,"A statement of refined elegance, bringing timeless sophistication to modest dressing. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft
-raya-ivory-boucle,,,,,,,,Size,54,RAYA-IVORY-BOUCLE-54,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,
-raya-ivory-boucle,,,,,,,,Size,56,RAYA-IVORY-BOUCLE-56,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,
-raya-ivory-boucle,,,,,,,,Size,58,RAYA-IVORY-BOUCLE-58,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,
-raya-sapphire-noir,Raya Tweed Abaya — Sapphire Noir,"<p>A statement of refined elegance, bringing timeless sophistication to modest dressing.</p>
-<p>Crafted in a luxurious textured tweed, this closed abaya combines a graceful silhouette with delicate feminine detailing.</p>
+<ul><li>Closed abaya</li><li>Discreet breastfeeding access with 4 snap buttons</li><li>Feather ruffle sleeves</li><li>Feather ruffle detailing down the centre</li><li>Hidden side pockets</li><li>Gold metal Hanan tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"everyday, nursing access, breastfeeding abaya, Raya Tweed Abaya, Ivory Bouclé",FALSE,Size,52,RAYA-IVORY-BOUCLE-52,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,FALSE,Raya Tweed Abaya in Ivory Bouclé | Nursing Abaya | HANAN,"A statement of refined elegance, bringing timeless sophistication to modest dressing. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft,raya,Raya Tweed Abaya,Ivory Bouclé,Cream / White,#E8DFD1,"Warm ivory-cream with a soft, textured bouclé appearance.","A statement of refined elegance, bringing timeless sophistication to modest dressing.",Textured tweed,Dry clean recommended to protect the feather ruffle detailing. Do not tumble dry.,"Loose through the body, closed front, feather ruffle sleeve.","Four discreet snap buttons give comfortable breastfeeding access, and keep the abaya elegantly closed when they are not in use."
+raya-ivory-boucle,,,,,,,,Size,54,RAYA-IVORY-BOUCLE-54,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+raya-ivory-boucle,,,,,,,,Size,56,RAYA-IVORY-BOUCLE-56,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+raya-ivory-boucle,,,,,,,,Size,58,RAYA-IVORY-BOUCLE-58,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+raya-sapphire-noir,Raya Tweed Abaya — Sapphire Noir,"<p>Crafted in a luxurious textured tweed, this closed abaya combines a graceful silhouette with delicate feminine detailing.</p>
 <p>The standout feature is the feather ruffle detailing, framing the sleeves and flowing down the centre of the abaya for a soft yet striking finish.</p>
 <p>Practicality is thoughtfully incorporated through hidden side pockets, while the finishing touches include a signature gold metal Hanan tag and branded fabric label.</p>
-<h4>Colour</h4>
-<p><strong>Sapphire Noir</strong> — Rich blue and black tweed with warm beige accents.</p>
-<h4>Nursing access</h4>
-<p>Four discreet snap buttons give comfortable breastfeeding access, and keep the abaya elegantly closed when they are not in use.</p>
-<h4>Fit</h4>
-<p>Loose through the body, closed front, feather ruffle sleeve.</p>
-<h4>Details</h4>
-<ul><li>Closed abaya</li><li>Discreet breastfeeding access with 4 snap buttons</li><li>Feather ruffle sleeves</li><li>Feather ruffle detailing down the centre</li><li>Hidden side pockets</li><li>Gold metal Hanan tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>
-<h4>Fabric</h4>
-<p>Textured tweed</p>
-<h4>Care</h4>
-<p>Dry clean recommended to protect the feather ruffle detailing. Do not tumble dry.</p>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"everyday, nursing access, breastfeeding abaya, Raya Tweed Abaya, Sapphire Noir",FALSE,Size,52,RAYA-SAPPHIRE-NOIR-52,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,FALSE,Raya Tweed Abaya in Sapphire Noir | Nursing Abaya | HANAN,"A statement of refined elegance, bringing timeless sophistication to modest dressing. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft
-raya-sapphire-noir,,,,,,,,Size,54,RAYA-SAPPHIRE-NOIR-54,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,
-raya-sapphire-noir,,,,,,,,Size,56,RAYA-SAPPHIRE-NOIR-56,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,
-raya-sapphire-noir,,,,,,,,Size,58,RAYA-SAPPHIRE-NOIR-58,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,
-jouri-layl,Jouri Glitter Floral Abaya — Layl,"<p>A statement of effortless glamour, for women who love refined detail with a timeless modest silhouette.</p>
-<p>An elegant closed abaya design, adorned with intricate floral beadwork and shimmering glitter detailing, for a luminous finish that catches the light.</p>
+<ul><li>Closed abaya</li><li>Discreet breastfeeding access with 4 snap buttons</li><li>Feather ruffle sleeves</li><li>Feather ruffle detailing down the centre</li><li>Hidden side pockets</li><li>Gold metal Hanan tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"everyday, nursing access, breastfeeding abaya, Raya Tweed Abaya, Sapphire Noir",FALSE,Size,52,RAYA-SAPPHIRE-NOIR-52,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,FALSE,Raya Tweed Abaya in Sapphire Noir | Nursing Abaya | HANAN,"A statement of refined elegance, bringing timeless sophistication to modest dressing. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft,raya,Raya Tweed Abaya,Sapphire Noir,Blue / Black / Beige,#2A3A55,Rich blue and black tweed with warm beige accents.,"A statement of refined elegance, bringing timeless sophistication to modest dressing.",Textured tweed,Dry clean recommended to protect the feather ruffle detailing. Do not tumble dry.,"Loose through the body, closed front, feather ruffle sleeve.","Four discreet snap buttons give comfortable breastfeeding access, and keep the abaya elegantly closed when they are not in use."
+raya-sapphire-noir,,,,,,,,Size,54,RAYA-SAPPHIRE-NOIR-54,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+raya-sapphire-noir,,,,,,,,Size,56,RAYA-SAPPHIRE-NOIR-56,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+raya-sapphire-noir,,,,,,,,Size,58,RAYA-SAPPHIRE-NOIR-58,0,shopify,0,deny,manual,95.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+jouri-layl,Jouri Glitter Floral Abaya — Layl,"<p>An elegant closed abaya design, adorned with intricate floral beadwork and shimmering glitter detailing, for a luminous finish that catches the light.</p>
 <p>The wide sleeves offer a graceful, flowing silhouette, while four discreet snap buttons provide breastfeeding access without opening the abaya.</p>
 <p>Thoughtfully finished with hidden side pockets, alongside a signature gold metal Hanan tag and branded fabric label.</p>
-<h4>Colour</h4>
-<p><strong>Layl</strong> — A deep, elegant navy base adorned with delicate floral embroidery, shimmering sequins and subtle metallic detailing.</p>
-<h4>Nursing access</h4>
-<p>Four discreet snap buttons give comfortable breastfeeding access, and keep the abaya beautifully closed when worn.</p>
-<h4>Fit</h4>
-<p>Loose through the body, closed front, wide sleeve.</p>
-<h4>Details</h4>
-<ul><li>Closed abaya</li><li>Full glitter floral beaded detailing</li><li>Discreet breastfeeding access with 4 snap buttons</li><li>Elegant wide sleeves</li><li>Hidden side pockets</li><li>Gold metal Hanan tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>
-<h4>Fabric</h4>
-<p>Glitter floral beaded fabric</p>
-<h4>Care</h4>
-<p>Dry clean only. Beadwork and glitter detailing should not be machine washed or tumble dried.</p>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"occasion, nursing access, breastfeeding abaya, Jouri Glitter Floral Abaya, Layl",FALSE,Size,52,JOURI-LAYL-52,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,FALSE,Jouri Glitter Floral Abaya in Layl | Nursing Abaya | HANAN,"A statement of effortless glamour, for women who love refined detail with a timeless modest silhouette. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft
-jouri-layl,,,,,,,,Size,54,JOURI-LAYL-54,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,
-jouri-layl,,,,,,,,Size,56,JOURI-LAYL-56,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,
-jouri-layl,,,,,,,,Size,58,JOURI-LAYL-58,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,
-jouri-lulwa,Jouri Glitter Floral Abaya — Lulwa,"<p>A statement of effortless glamour, for women who love refined detail with a timeless modest silhouette.</p>
-<p>An elegant closed abaya design, adorned with intricate floral beadwork and shimmering glitter detailing, for a luminous finish that catches the light.</p>
+<ul><li>Closed abaya</li><li>Full glitter floral beaded detailing</li><li>Discreet breastfeeding access with 4 snap buttons</li><li>Elegant wide sleeves</li><li>Hidden side pockets</li><li>Gold metal Hanan tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"occasion, nursing access, breastfeeding abaya, Jouri Glitter Floral Abaya, Layl",FALSE,Size,52,JOURI-LAYL-52,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,FALSE,Jouri Glitter Floral Abaya in Layl | Nursing Abaya | HANAN,"A statement of effortless glamour, for women who love refined detail with a timeless modest silhouette. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft,jouri,Jouri Glitter Floral Abaya,Layl,Navy Blue,#1F2A44,"A deep, elegant navy base adorned with delicate floral embroidery, shimmering sequins and subtle metallic detailing.","A statement of effortless glamour, for women who love refined detail with a timeless modest silhouette.",Glitter floral beaded fabric,Dry clean only. Beadwork and glitter detailing should not be machine washed or tumble dried.,"Loose through the body, closed front, wide sleeve.","Four discreet snap buttons give comfortable breastfeeding access, and keep the abaya beautifully closed when worn."
+jouri-layl,,,,,,,,Size,54,JOURI-LAYL-54,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+jouri-layl,,,,,,,,Size,56,JOURI-LAYL-56,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+jouri-layl,,,,,,,,Size,58,JOURI-LAYL-58,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+jouri-lulwa,Jouri Glitter Floral Abaya — Lulwa,"<p>An elegant closed abaya design, adorned with intricate floral beadwork and shimmering glitter detailing, for a luminous finish that catches the light.</p>
 <p>The wide sleeves offer a graceful, flowing silhouette, while four discreet snap buttons provide breastfeeding access without opening the abaya.</p>
 <p>Thoughtfully finished with hidden side pockets, alongside a signature gold metal Hanan tag and branded fabric label.</p>
-<h4>Colour</h4>
-<p><strong>Lulwa</strong> — A soft lilac base with intricate floral embellishment, creating a feminine, delicate and luminous finish.</p>
-<h4>Nursing access</h4>
-<p>Four discreet snap buttons give comfortable breastfeeding access, and keep the abaya beautifully closed when worn.</p>
-<h4>Fit</h4>
-<p>Loose through the body, closed front, wide sleeve.</p>
-<h4>Details</h4>
-<ul><li>Closed abaya</li><li>Full glitter floral beaded detailing</li><li>Discreet breastfeeding access with 4 snap buttons</li><li>Elegant wide sleeves</li><li>Hidden side pockets</li><li>Gold metal Hanan tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>
-<h4>Fabric</h4>
-<p>Glitter floral beaded fabric</p>
-<h4>Care</h4>
-<p>Dry clean only. Beadwork and glitter detailing should not be machine washed or tumble dried.</p>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"occasion, nursing access, breastfeeding abaya, Jouri Glitter Floral Abaya, Lulwa",FALSE,Size,52,JOURI-LULWA-52,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,FALSE,Jouri Glitter Floral Abaya in Lulwa | Nursing Abaya | HANAN,"A statement of effortless glamour, for women who love refined detail with a timeless modest silhouette. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft
-jouri-lulwa,,,,,,,,Size,54,JOURI-LULWA-54,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,
-jouri-lulwa,,,,,,,,Size,56,JOURI-LULWA-56,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,
-jouri-lulwa,,,,,,,,Size,58,JOURI-LULWA-58,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,
-jouri-qahwa,Jouri Glitter Floral Abaya — Qahwa,"<p>A statement of effortless glamour, for women who love refined detail with a timeless modest silhouette.</p>
-<p>An elegant closed abaya design, adorned with intricate floral beadwork and shimmering glitter detailing, for a luminous finish that catches the light.</p>
+<ul><li>Closed abaya</li><li>Full glitter floral beaded detailing</li><li>Discreet breastfeeding access with 4 snap buttons</li><li>Elegant wide sleeves</li><li>Hidden side pockets</li><li>Gold metal Hanan tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"occasion, nursing access, breastfeeding abaya, Jouri Glitter Floral Abaya, Lulwa",FALSE,Size,52,JOURI-LULWA-52,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,FALSE,Jouri Glitter Floral Abaya in Lulwa | Nursing Abaya | HANAN,"A statement of effortless glamour, for women who love refined detail with a timeless modest silhouette. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft,jouri,Jouri Glitter Floral Abaya,Lulwa,Lilac,#B9A7CC,"A soft lilac base with intricate floral embellishment, creating a feminine, delicate and luminous finish.","A statement of effortless glamour, for women who love refined detail with a timeless modest silhouette.",Glitter floral beaded fabric,Dry clean only. Beadwork and glitter detailing should not be machine washed or tumble dried.,"Loose through the body, closed front, wide sleeve.","Four discreet snap buttons give comfortable breastfeeding access, and keep the abaya beautifully closed when worn."
+jouri-lulwa,,,,,,,,Size,54,JOURI-LULWA-54,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+jouri-lulwa,,,,,,,,Size,56,JOURI-LULWA-56,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+jouri-lulwa,,,,,,,,Size,58,JOURI-LULWA-58,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+jouri-qahwa,Jouri Glitter Floral Abaya — Qahwa,"<p>An elegant closed abaya design, adorned with intricate floral beadwork and shimmering glitter detailing, for a luminous finish that catches the light.</p>
 <p>The wide sleeves offer a graceful, flowing silhouette, while four discreet snap buttons provide breastfeeding access without opening the abaya.</p>
 <p>Thoughtfully finished with hidden side pockets, alongside a signature gold metal Hanan tag and branded fabric label.</p>
-<h4>Colour</h4>
-<p><strong>Qahwa</strong> — A rich warm brown base complemented by ornate floral detailing and subtle sparkle for a sophisticated, earthy luxury.</p>
-<h4>Nursing access</h4>
-<p>Four discreet snap buttons give comfortable breastfeeding access, and keep the abaya beautifully closed when worn.</p>
-<h4>Fit</h4>
-<p>Loose through the body, closed front, wide sleeve.</p>
-<h4>Details</h4>
-<ul><li>Closed abaya</li><li>Full glitter floral beaded detailing</li><li>Discreet breastfeeding access with 4 snap buttons</li><li>Elegant wide sleeves</li><li>Hidden side pockets</li><li>Gold metal Hanan tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>
-<h4>Fabric</h4>
-<p>Glitter floral beaded fabric</p>
-<h4>Care</h4>
-<p>Dry clean only. Beadwork and glitter detailing should not be machine washed or tumble dried.</p>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"occasion, nursing access, breastfeeding abaya, Jouri Glitter Floral Abaya, Qahwa",FALSE,Size,52,JOURI-QAHWA-52,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,FALSE,Jouri Glitter Floral Abaya in Qahwa | Nursing Abaya | HANAN,"A statement of effortless glamour, for women who love refined detail with a timeless modest silhouette. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft
-jouri-qahwa,,,,,,,,Size,54,JOURI-QAHWA-54,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,
-jouri-qahwa,,,,,,,,Size,56,JOURI-QAHWA-56,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,
-jouri-qahwa,,,,,,,,Size,58,JOURI-QAHWA-58,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,
-jouri-ruman,Jouri Glitter Floral Abaya — Ruman,"<p>A statement of effortless glamour, for women who love refined detail with a timeless modest silhouette.</p>
-<p>An elegant closed abaya design, adorned with intricate floral beadwork and shimmering glitter detailing, for a luminous finish that catches the light.</p>
+<ul><li>Closed abaya</li><li>Full glitter floral beaded detailing</li><li>Discreet breastfeeding access with 4 snap buttons</li><li>Elegant wide sleeves</li><li>Hidden side pockets</li><li>Gold metal Hanan tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"occasion, nursing access, breastfeeding abaya, Jouri Glitter Floral Abaya, Qahwa",FALSE,Size,52,JOURI-QAHWA-52,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,FALSE,Jouri Glitter Floral Abaya in Qahwa | Nursing Abaya | HANAN,"A statement of effortless glamour, for women who love refined detail with a timeless modest silhouette. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft,jouri,Jouri Glitter Floral Abaya,Qahwa,Brown,#6B4A34,"A rich warm brown base complemented by ornate floral detailing and subtle sparkle for a sophisticated, earthy luxury.","A statement of effortless glamour, for women who love refined detail with a timeless modest silhouette.",Glitter floral beaded fabric,Dry clean only. Beadwork and glitter detailing should not be machine washed or tumble dried.,"Loose through the body, closed front, wide sleeve.","Four discreet snap buttons give comfortable breastfeeding access, and keep the abaya beautifully closed when worn."
+jouri-qahwa,,,,,,,,Size,54,JOURI-QAHWA-54,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+jouri-qahwa,,,,,,,,Size,56,JOURI-QAHWA-56,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+jouri-qahwa,,,,,,,,Size,58,JOURI-QAHWA-58,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+jouri-ruman,Jouri Glitter Floral Abaya — Ruman,"<p>An elegant closed abaya design, adorned with intricate floral beadwork and shimmering glitter detailing, for a luminous finish that catches the light.</p>
 <p>The wide sleeves offer a graceful, flowing silhouette, while four discreet snap buttons provide breastfeeding access without opening the abaya.</p>
 <p>Thoughtfully finished with hidden side pockets, alongside a signature gold metal Hanan tag and branded fabric label.</p>
-<h4>Colour</h4>
-<p><strong>Ruman</strong> — A deep maroon-red base with statement floral embroidery and shimmering details, giving the abaya a rich, regal finish.</p>
-<h4>Nursing access</h4>
-<p>Four discreet snap buttons give comfortable breastfeeding access, and keep the abaya beautifully closed when worn.</p>
-<h4>Fit</h4>
-<p>Loose through the body, closed front, wide sleeve.</p>
-<h4>Details</h4>
-<ul><li>Closed abaya</li><li>Full glitter floral beaded detailing</li><li>Discreet breastfeeding access with 4 snap buttons</li><li>Elegant wide sleeves</li><li>Hidden side pockets</li><li>Gold metal Hanan tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>
-<h4>Fabric</h4>
-<p>Glitter floral beaded fabric</p>
-<h4>Care</h4>
-<p>Dry clean only. Beadwork and glitter detailing should not be machine washed or tumble dried.</p>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"occasion, nursing access, breastfeeding abaya, Jouri Glitter Floral Abaya, Ruman",FALSE,Size,52,JOURI-RUMAN-52,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,FALSE,Jouri Glitter Floral Abaya in Ruman | Nursing Abaya | HANAN,"A statement of effortless glamour, for women who love refined detail with a timeless modest silhouette. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft
-jouri-ruman,,,,,,,,Size,54,JOURI-RUMAN-54,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,
-jouri-ruman,,,,,,,,Size,56,JOURI-RUMAN-56,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,
-jouri-ruman,,,,,,,,Size,58,JOURI-RUMAN-58,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,
+<ul><li>Closed abaya</li><li>Full glitter floral beaded detailing</li><li>Discreet breastfeeding access with 4 snap buttons</li><li>Elegant wide sleeves</li><li>Hidden side pockets</li><li>Gold metal Hanan tag</li><li>Branded fabric label</li><li>Sizes 52, 54, 56 and 58</li><li>Includes a matching hijab</li></ul>",HANAN,Apparel & Accessories > Clothing > Dresses,Abaya,"occasion, nursing access, breastfeeding abaya, Jouri Glitter Floral Abaya, Ruman",FALSE,Size,52,JOURI-RUMAN-52,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,FALSE,Jouri Glitter Floral Abaya in Ruman | Nursing Abaya | HANAN,"A statement of effortless glamour, for women who love refined detail with a timeless modest silhouette. Sizes 52–58, with a matching hijab and concealed nursing access.",g,draft,jouri,Jouri Glitter Floral Abaya,Ruman,Maroon Red,#7A1F2B,"A deep maroon-red base with statement floral embroidery and shimmering details, giving the abaya a rich, regal finish.","A statement of effortless glamour, for women who love refined detail with a timeless modest silhouette.",Glitter floral beaded fabric,Dry clean only. Beadwork and glitter detailing should not be machine washed or tumble dried.,"Loose through the body, closed front, wide sleeve.","Four discreet snap buttons give comfortable breastfeeding access, and keep the abaya beautifully closed when worn."
+jouri-ruman,,,,,,,,Size,54,JOURI-RUMAN-54,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+jouri-ruman,,,,,,,,Size,56,JOURI-RUMAN-56,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,
+jouri-ruman,,,,,,,,Size,58,JOURI-RUMAN-58,0,shopify,0,deny,manual,135.00,,TRUE,TRUE,,,,,,,g,,,,,,,,,,,,

@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "settings": { "eyebrow": "The collections", "filter_menu": "shop-filters" }
+    }
+  },
+  "order": ["main"]
+}

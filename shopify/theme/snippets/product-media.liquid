@@ -1,0 +1,16 @@
+{%- comment -%}
+  One product image, or the drawn silhouette tinted to the colourway while
+  photography is outstanding.
+  Takes: product, media_index (0-based), caption, hex
+{%- endcomment -%}
+{%- assign img = product.media[media_index] -%}
+{%- if img and img.media_type == 'image' -%}
+  {{ img | image_url: width: 1200 | image_tag:
+       loading: 'lazy',
+       sizes: '(min-width: 900px) 45vw, 100vw',
+       widths: '400,600,800,1200',
+       alt: img.alt | default: product.title | escape }}
+{%- elsif settings.show_placeholder_art -%}
+  <svg viewBox="0 0 200 300" style="fill:{{ hex }};stroke:#F8F5F0"><use href="#robe"></use></svg>
+  {%- if caption != blank -%}<span class="ph-tag">{{ caption }}</span>{%- endif -%}
+{%- endif -%}

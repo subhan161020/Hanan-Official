@@ -1,0 +1,98 @@
+<section class="page">
+  {%- render 'breadcrumbs', trail: 'Size chart' -%}
+
+  <div class="wrap phead">
+    <span class="eyebrow">{{ section.settings.eyebrow }}</span>
+    <h1 style="font-size:clamp(2.2rem,5vw,3.6rem)">{{ section.settings.heading }}</h1>
+    <p>{{ section.settings.intro }}</p>
+  </div>
+
+  <div class="wrap" style="max-width:920px;padding-bottom:var(--sec)">
+    <h3 style="margin-bottom:1rem">Standard sizing</h3>
+    <div class="tbl-scroll rv">
+      <table>
+        <thead>
+          <tr>
+            <th>Size</th><th>Your height</th><th>Garment length</th>
+            <th>Bust (flat, doubled)</th><th>Sleeve</th><th>UK dress</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%- for block in section.blocks -%}
+            <tr {{ block.shopify_attributes }}>
+              <td>{{ block.settings.size }}</td>
+              <td>{{ block.settings.height }}</td>
+              <td>{{ block.settings.length }}</td>
+              <td>{{ block.settings.bust }}</td>
+              <td>{{ block.settings.sleeve }}</td>
+              <td>{{ block.settings.uk_dress }}</td>
+            </tr>
+          {%- endfor -%}
+        </tbody>
+      </table>
+    </div>
+    <p class="small" style="margin-top:1rem">{{ section.settings.table_note }}</p>
+
+    <h3 style="margin:3.2rem 0 1rem">How to measure</h3>
+    <div class="split" style="gap:2.4rem">
+      <div>
+        <details class="acc" open><summary>Length</summary><div class="acc-b"><p>Stand in the shoes you would normally wear. Measure from the top of your shoulder, beside your neck, straight down to where you want the hem to sit. Most women want it just off the floor.</p></div></details>
+        <details class="acc"><summary>Bust</summary><div class="acc-b"><p>Measure around the fullest part of your bust, keeping the tape level. If you are nursing, measure while full rather than after a feed — that is the size you need it to work at.</p></div></details>
+        <details class="acc"><summary>Sleeve</summary><div class="acc-b"><p>From the shoulder point down the outside of a slightly bent arm to the wrist bone.</p></div></details>
+        <details class="acc"><summary>Between two sizes?</summary><div class="acc-b"><p>Go up. An abaya that is slightly long reads as elegant; one that is short does not. If you are between sizes on height but smaller on bust, the size chart on each product page will say whether that style runs generous.</p></div></details>
+      </div>
+      <div class="panel" style="aspect-ratio:1/1">
+        {%- if section.settings.diagram != blank -%}
+          {{ section.settings.diagram | image_url: width: 900 | image_tag: loading: 'lazy', alt: 'Measurement diagram' }}
+        {%- else -%}
+          <svg viewBox="0 0 200 300" style="fill:#A18F7A;stroke:#F8F5F0;width:48%"><use href="#robe"></use></svg>
+          <span class="ph-tag">Diagram — measurement points</span>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class="rule" style="margin-block:3.4rem"><i class="dot"></i></div>
+    <p class="center">{{ section.settings.help_line }}</p>
+    {%- assign contact_page = pages['contact'] -%}
+    <p class="center" style="margin-top:1.6rem">
+      <a class="btn" href="{{ contact_page.url | default: '/pages/contact' }}">Ask about sizing</a>
+    </p>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Size chart",
+  "max_blocks": 12,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Fit guide" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Size chart" },
+    {
+      "type": "textarea", "id": "intro", "label": "Intro",
+      "default": "Abaya sizes are traditionally the garment length in inches, not a body size. Choose by your height first, then check the bust measurement."
+    },
+    {
+      "type": "textarea", "id": "table_note", "label": "Table note",
+      "default": "Measurements are taken flat and are approximate to within 1 in / 2.5 cm. Our abayas are cut loose — the bust figure is the garment, not your body."
+    },
+    { "type": "image_picker", "id": "diagram", "label": "Measurement diagram" },
+    {
+      "type": "textarea", "id": "help_line", "label": "Help line",
+      "default": "Still unsure? Send us your height and usual dress size and we will tell you honestly which one to order."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row", "name": "Size row",
+      "settings": [
+        { "type": "text", "id": "size", "label": "Size" },
+        { "type": "text", "id": "height", "label": "Your height" },
+        { "type": "text", "id": "length", "label": "Garment length" },
+        { "type": "text", "id": "bust", "label": "Bust (flat, doubled)" },
+        { "type": "text", "id": "sleeve", "label": "Sleeve" },
+        { "type": "text", "id": "uk_dress", "label": "UK dress" }
+      ]
+    }
+  ]
+}
+{% endschema %}

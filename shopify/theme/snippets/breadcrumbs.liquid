@@ -1,0 +1,8 @@
+{%- comment -%} Takes: trail (optional final label), parent / parent_url (optional middle link) {%- endcomment -%}
+<div class="wrap">
+  <div class="crumb">
+    <a href="{{ routes.root_url }}">{{ 'general.breadcrumbs.home' | t }}</a>
+    {%- if parent != blank -%} / <a href="{{ parent_url }}">{{ parent }}</a>{%- endif -%}
+    {%- if trail != blank -%} / <span>{{ trail }}</span>{%- endif -%}
+  </div>
+</div>

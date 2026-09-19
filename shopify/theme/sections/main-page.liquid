@@ -1,0 +1,12 @@
+<section class="page">
+  {%- render 'breadcrumbs', trail: page.title -%}
+  <div class="wrap phead rv">
+    <h1 style="font-size:clamp(2.2rem,5vw,3.6rem)">{{ page.title }}</h1>
+  </div>
+  <div class="wrap" style="max-width:800px;padding-bottom:var(--sec)">
+    <div class="rv">{{ page.content }}</div>
+  </div>
+</section>
+{% schema %}
+{ "name": "Page" }
+{% endschema %}

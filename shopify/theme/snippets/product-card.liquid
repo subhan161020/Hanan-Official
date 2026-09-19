@@ -1,0 +1,54 @@
+{%- comment -%}
+  A product card for the shop grid and the "you may also like" row.
+  Keeps the two-layer .ph markup the stylesheet animates: the second layer
+  fades in on hover, whether it holds a real photograph or the silhouette.
+  Takes: product
+{%- endcomment -%}
+{%- comment -%}
+  Display fields for this product, preferring the metafields the import sets
+  and falling back to the title when they are missing.
+
+  Written out here rather than pulled from a snippet: {% render %} is a closed
+  scope, so variables assigned inside a snippet never reach the caller.
+{%- endcomment -%}
+{%- assign pf_style_name = product.metafields.custom.style_name.value -%}
+{%- assign pf_colour_name = product.metafields.custom.colour_name.value -%}
+{%- if pf_style_name == blank or pf_colour_name == blank -%}
+  {%- assign title_parts = product.title | split: '—' -%}
+  {%- if pf_style_name == blank -%}
+    {%- assign pf_style_name = title_parts[0] | strip -%}
+  {%- endif -%}
+  {%- if pf_colour_name == blank and title_parts.size > 1 -%}
+    {%- assign pf_colour_name = title_parts[1] | strip -%}
+  {%- endif -%}
+{%- endif -%}
+{%- assign pf_swatch_hex = product.metafields.custom.swatch_hex.value | default: '#A18F7A' -%}
+{%- assign pf_style_group = product.metafields.custom.style_group.value -%}
+
+<a class="card" href="{{ product.url }}">
+  <div class="card-img">
+    {%- unless product.available -%}
+      <span class="flag">{{ 'products.product.sold_out' | t }}</span>
+    {%- endunless -%}
+
+    <div class="ph main"{% unless product.featured_media %} style="background:linear-gradient(160deg,#F8F5F0,#EDE4D6)"{% endunless %}>
+      {%- render 'product-media', product: product, media_index: 0,
+            caption: 'Photo 1 — full length', hex: pf_swatch_hex -%}
+    </div>
+    <div class="ph alt"{% unless product.media[1] %} style="background:linear-gradient(200deg,#F2EDE5,#E4DACB)"{% endunless %}>
+      {%- render 'product-media', product: product, media_index: 1,
+            caption: 'Photo 2 — worn / detail', hex: pf_swatch_hex -%}
+    </div>
+
+    <span class="quick">View</span>
+  </div>
+
+  <div class="card-body">
+    <h3 class="card-name">{{ pf_style_name }}</h3>
+    <p class="card-col">{{ pf_colour_name }}</p>
+    <span class="card-price">{{ product.price | money }}</span>
+    <div class="swatches">
+      {%- render 'sibling-swatches', product: product, style_group: pf_style_group, as_links: false -%}
+    </div>
+  </div>
+</a>

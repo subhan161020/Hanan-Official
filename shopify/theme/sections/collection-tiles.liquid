@@ -1,0 +1,55 @@
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="center rv">
+      <svg class="swash" viewBox="0 0 240 60" aria-hidden="true">
+        <path d="M8 30c0 16 14 24 30 24 34 0 52-28 78-28 20 0 26 12 46 12 14 0 24-6 30-14"></path>
+        <rect class="pip" x="112" y="6" width="9" height="9" transform="rotate(45 116 10)"></rect>
+      </svg>
+      <span class="eyebrow">{{ section.settings.eyebrow }}</span>
+      <h2>{{ section.settings.heading }}</h2>
+    </div>
+    <div class="tiles" style="margin-top:3rem">
+      {%- for block in section.blocks -%}
+        {%- assign tile_collection = collections[block.settings.collection] -%}
+        <a class="tile {{ block.settings.tile_class }} rv" href="{{ tile_collection.url | default: block.settings.link }}" {{ block.shopify_attributes }}>
+          <div class="tile-in">
+            <h3>{{ block.settings.heading | default: tile_collection.title }}</h3>
+            <span class="link">{{ block.settings.link_text }}</span>
+          </div>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collection tiles",
+  "max_blocks": 4,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The collections" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "For every day, and every occasion" }
+  ],
+  "blocks": [
+    {
+      "type": "tile", "name": "Tile",
+      "settings": [
+        { "type": "collection", "id": "collection", "label": "Collection" },
+        { "type": "text", "id": "heading", "label": "Heading override" },
+        { "type": "text", "id": "link_text", "label": "Link text", "default": "Shop now" },
+        { "type": "url", "id": "link", "label": "Link override" },
+        {
+          "type": "select", "id": "tile_class", "label": "Tile artwork",
+          "options": [
+            { "value": "t1", "label": "Style 1" },
+            { "value": "t2", "label": "Style 2" },
+            { "value": "t3", "label": "Style 3" }
+          ],
+          "default": "t1"
+        }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Collection tiles" }]
+}
+{% endschema %}

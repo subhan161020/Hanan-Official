@@ -1,0 +1,122 @@
+<section class="page">
+  {%- render 'breadcrumbs', trail: 'Contact us' -%}
+
+  <div class="wrap phead">
+    <span class="eyebrow">{{ section.settings.eyebrow }}</span>
+    <h1 style="font-size:clamp(2.2rem,5vw,3.6rem)">{{ section.settings.heading }}</h1>
+    <p>{{ section.settings.intro }}</p>
+  </div>
+
+  <div class="wrap" style="padding-bottom:var(--sec)">
+    <div class="split" style="gap:clamp(30px,5vw,80px)">
+      <div>
+        {%- comment -%}
+          A real Shopify contact form. Messages land in the store's customer
+          email — no third-party form service needed.
+        {%- endcomment -%}
+        {%- form 'contact', id: 'contactForm' -%}
+          {%- if form.posted_successfully? -%}
+            <p class="form-note" style="color:var(--gold-dp);margin-bottom:1.4rem">{{ 'contact.form.success' | t }}</p>
+          {%- endif -%}
+          {%- if form.errors -%}
+            <div class="form-errors">{{ form.errors | default_errors }}</div>
+          {%- endif -%}
+
+          <div class="field">
+            <label for="cn">{{ 'contact.form.name' | t }}</label>
+            <input id="cn" name="contact[name]" value="{{ form.name }}" required>
+          </div>
+          <div class="field">
+            <label for="ce">{{ 'contact.form.email' | t }}</label>
+            <input id="ce" name="contact[email]" type="email" value="{{ form.email }}" required>
+          </div>
+          <div class="field">
+            <label for="co">{{ 'contact.form.order' | t }}
+              <span style="text-transform:none;letter-spacing:0">{{ 'contact.form.order_hint' | t }}</span>
+            </label>
+            <input id="co" name="contact[order number]">
+          </div>
+          <div class="field">
+            <label for="cs">{{ 'contact.form.subject' | t }}</label>
+            <select id="cs" name="contact[subject]">
+              {%- for block in section.blocks -%}
+                <option value="{{ block.settings.label | escape }}">{{ block.settings.label }}</option>
+              {%- endfor -%}
+            </select>
+          </div>
+          <div class="field">
+            <label for="cm">{{ 'contact.form.message' | t }}</label>
+            <textarea id="cm" name="contact[body]" required>{{ form.body }}</textarea>
+          </div>
+          <button class="btn solid" type="submit">{{ 'contact.form.send' | t }}</button>
+        {%- endform -%}
+      </div>
+
+      <div>
+        <h3 style="margin-bottom:1.2rem">Other ways to reach us</h3>
+
+        <p class="small" style="margin-bottom:.3rem;letter-spacing:.2em;text-transform:uppercase">Email</p>
+        <p style="margin-bottom:1.6rem">
+          <a href="mailto:{{ settings.contact_email }}" class="link" style="text-transform:none;letter-spacing:.04em;font-size:1rem">
+            {{ settings.contact_email }}
+          </a>
+        </p>
+
+        {%- if settings.instagram_url != blank -%}
+          <p class="small" style="margin-bottom:.3rem;letter-spacing:.2em;text-transform:uppercase">Instagram</p>
+          <p style="margin-bottom:1.6rem">
+            <a href="{{ settings.instagram_url }}" target="_blank" rel="noopener" class="link" style="text-transform:none;letter-spacing:.04em;font-size:1rem">
+              {{ section.settings.instagram_handle }}
+            </a> — fastest for quick sizing questions
+          </p>
+        {%- endif -%}
+
+        {%- comment -%}
+          REQUIRED BY UK LAW: trading name, geographic address and email must
+          appear on the site. Fill these in before the store opens.
+        {%- endcomment -%}
+        <p class="small" style="margin-bottom:.3rem;letter-spacing:.2em;text-transform:uppercase">Returns address</p>
+        <p class="small" style="margin-bottom:1.6rem">{{ section.settings.returns_address }}</p>
+
+        <p class="small" style="margin-bottom:.3rem;letter-spacing:.2em;text-transform:uppercase">Company details</p>
+        <p class="small">{{ section.settings.company_details }}</p>
+
+        <h3 style="margin:2.8rem 0 1rem">Quick answers</h3>
+        <details class="acc"><summary>Where is my order?</summary><div class="acc-b"><p>Orders placed before 2pm ship the same working day. Royal Mail Tracked 48 as standard, Tracked 24 as an upgrade. You will get a tracking link by email as soon as it leaves us.</p></div></details>
+        <details class="acc"><summary>Can I exchange for another size?</summary><div class="acc-b"><p>Yes, within 30 days, unworn with tags on. Message us first so we can hold the size you need.</p></div></details>
+        <details class="acc"><summary>Do you ship outside the UK?</summary><div class="acc-b"><p>Yes. Duties and local taxes are the customer's responsibility unless stated at checkout.</p></div></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Contact",
+  "max_blocks": 10,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Get in touch" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Contact us" },
+    {
+      "type": "textarea", "id": "intro", "label": "Intro",
+      "default": "A real person reads every message. We reply within one working day, Monday to Friday."
+    },
+    { "type": "text", "id": "instagram_handle", "label": "Instagram handle", "default": "@hanan.tmodesty" },
+    {
+      "type": "html", "id": "returns_address", "label": "Returns address",
+      "info": "Required by UK law — your real trading name and geographic address.",
+      "default": "[Your business name]<br>[Street address]<br>London<br>[Postcode]<br>United Kingdom"
+    },
+    {
+      "type": "html", "id": "company_details", "label": "Company details",
+      "default": "[Registered company name] · Company no. [00000000]<br>[VAT no. if registered]"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "subject", "name": "Subject option",
+      "settings": [{ "type": "text", "id": "label", "label": "Label" }]
+    }
+  ]
+}
+{% endschema %}

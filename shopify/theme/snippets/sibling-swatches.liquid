@@ -1,0 +1,29 @@
+{%- comment -%}
+  The other colourways of the same style, as swatch links.
+
+  Siblings are found by scanning the "all" collection for a matching
+  custom.style_group. That is cheap at this catalogue's size (12 products);
+  if the range grows past a few dozen, give each style its own automated
+  collection and read that instead.
+
+  Takes: product, style_group, as_links (true on a product page, false on a card)
+{%- endcomment -%}
+{%- if style_group != blank -%}
+  {%- assign siblings = collections.all.products | where: 'metafields.custom.style_group.value', style_group -%}
+  {%- if siblings.size == 0 -%}{%- assign siblings = collections.all.products -%}{%- endif -%}
+  {%- for sib in siblings -%}
+    {%- if sib.metafields.custom.style_group.value != style_group -%}{%- continue -%}{%- endif -%}
+    {%- assign sib_hex = sib.metafields.custom.swatch_hex.value | default: '#A18F7A' -%}
+    {%- assign sib_colour = sib.metafields.custom.colour_name.value | default: sib.title -%}
+    {%- if as_links -%}
+      <a href="{{ sib.url }}"
+         class="colsw{% if sib.id == product.id %} on{% endif %}"
+         style="background:{{ sib_hex }}"
+         title="{{ sib_colour | escape }}"
+         aria-label="{{ sib_colour | escape }}"
+         {% if sib.id == product.id %}aria-current="page"{% endif %}></a>
+    {%- else -%}
+      <span class="sw" style="background:{{ sib_hex }}" title="{{ sib_colour | escape }}"></span>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}

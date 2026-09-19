@@ -1,0 +1,37 @@
+{%- comment -%}
+  The bag drawer's line items. Re-rendered by theme.js after every AJAX
+  cart change via the section rendering API, so it must stay self-contained.
+{%- endcomment -%}
+{%- if cart.item_count > 0 -%}
+  {%- for line in cart.items -%}
+    {%- assign line_hex = line.product.metafields.custom.swatch_hex.value | default: '#A18F7A' -%}
+    {%- assign line_style = line.product.metafields.custom.style_name.value | default: line.product.title -%}
+    {%- assign line_colour = line.product.metafields.custom.colour_name.value -%}
+    <div class="bag-item" data-line="{{ forloop.index }}">
+      <div class="bag-thumb">
+        {%- if line.image -%}
+          {{ line.image | image_url: width: 160 | image_tag: loading: 'lazy', alt: line.title | escape }}
+        {%- else -%}
+          <svg viewBox="0 0 200 300" style="fill:{{ line_hex }};stroke:#F8F5F0"><use href="#robe"></use></svg>
+        {%- endif -%}
+      </div>
+      <div>
+        <h3 class="card-name" style="font-size:1rem">{{ line_style }}</h3>
+        <p class="card-col" style="margin:.2rem 0">
+          {%- if line_colour != blank -%}{{ line_colour }} · {% endif -%}
+          {{ 'products.product.size' | t }} {{ line.variant.title }}
+        </p>
+        <p class="small">{{ 'layout.cart.quantity' | t }} {{ line.quantity }}</p>
+        <button class="link" type="button" data-cart-remove="{{ forloop.index }}" style="font-size:.6rem;margin-top:.4rem">
+          {{ 'layout.cart.remove' | t }}
+        </button>
+      </div>
+      <span class="card-price">{{ line.final_line_price | money }}</span>
+    </div>
+  {%- endfor -%}
+{%- else -%}
+  <div class="empty">
+    <p>{{ 'layout.cart.empty' | t }}</p>
+    <a class="btn" href="{{ routes.all_products_collection_url }}" data-close>{{ 'layout.cart.start_shopping' | t }}</a>
+  </div>
+{%- endif -%}

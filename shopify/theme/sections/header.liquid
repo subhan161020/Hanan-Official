@@ -1,0 +1,90 @@
+<header class="hdr">
+  <div class="hdr-in">
+    <button class="burger" id="burger" type="button" aria-label="{{ 'general.accessibility.open_menu' | t }}" aria-expanded="false" aria-controls="menu">
+      <span class="bars"><i></i><i></i><i></i></span><span class="lbl">Menu</span>
+    </button>
+
+    {%- comment -%} All navigation lives in the slide-out drawer, as on the original site. {%- endcomment -%}
+
+    <a class="brand" href="{{ routes.root_url }}" aria-label="HANAN home">
+      {%- if section.settings.logo != blank -%}
+        {{ section.settings.logo | image_url: width: 600 | image_tag: alt: shop.name | escape }}
+      {%- else -%}
+        <img src="{{ 'hanan-wordmark-header.webp' | asset_url }}" alt="HANAN — Timeless Modesty" width="503" height="47">
+      {%- endif -%}
+    </a>
+
+    <div class="hdr-act">
+      <a class="iconbtn" href="{{ routes.account_url }}" aria-label="{{ 'layout.customer.log_in' | t }}">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"></path></svg>
+        <span class="lbl">{% if customer %}{{ 'layout.customer.account' | t }}{% else %}{{ 'layout.customer.log_in' | t }}{% endif %}</span>
+      </a>
+      <button class="iconbtn" id="bagBtn" type="button" aria-label="{{ 'general.accessibility.open_bag' | t }}" aria-expanded="false" aria-controls="bag">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 7h16l-1.2 13.2a1 1 0 0 1-1 .8H6.2a1 1 0 0 1-1-.8z"></path><path d="M8.5 10V6.5a3.5 3.5 0 0 1 7 0V10"></path></svg>
+        <span class="count" id="bagCount" {% if cart.item_count == 0 %}hidden{% endif %}>{{ cart.item_count }}</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+{%- comment -%} ===== menu drawer ===== {%- endcomment -%}
+<aside class="drawer" id="menu" aria-label="Menu" aria-hidden="true">
+  <div class="drawer-top">
+    <h4>Menu</h4>
+    <button class="close" type="button" data-close aria-label="{{ 'general.accessibility.close' | t }}">&times;</button>
+  </div>
+  <nav class="mnav">
+    {%- for link in linklists[section.settings.menu].links -%}
+      <a href="{{ link.url }}">{{ link.title }}</a>
+      {%- if link.links.size > 0 -%}
+        <div class="sub">
+          {%- for child in link.links -%}
+            <a href="{{ child.url }}">{{ child.title }}</a>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+    <a href="{{ routes.account_url }}">
+      {% if customer %}{{ 'layout.customer.account' | t }}{% else %}{{ 'layout.customer.log_in' | t }}{% endif %}
+    </a>
+    <div class="socials" style="margin-top:2rem">
+      {%- render 'social-links', gold: true -%}
+    </div>
+  </nav>
+</aside>
+
+{%- comment -%} ===== bag drawer — the real cart ===== {%- endcomment -%}
+<aside class="drawer right" id="bag" aria-label="{{ 'layout.cart.title' | t }}" aria-hidden="true">
+  <div class="drawer-top">
+    <h4>{{ 'layout.cart.title' | t }}</h4>
+    <button class="close" type="button" data-close aria-label="{{ 'general.accessibility.close' | t }}">&times;</button>
+  </div>
+
+  <div class="bag-body" id="bagBody">
+    {%- render 'cart-drawer-items' -%}
+  </div>
+
+  <div class="bag-foot">
+    <div class="bag-row">
+      <span>{{ 'layout.cart.subtotal' | t }}</span>
+      <span id="bagTotal">{{ cart.total_price | money }}</span>
+    </div>
+    <p class="small" style="margin-bottom:1rem">{{ 'layout.cart.tax_note' | t }}</p>
+    <form action="{{ routes.cart_url }}" method="post" id="bagForm">
+      <button class="btn solid block" type="submit" name="checkout" id="checkoutBtn"
+              {% if cart.item_count == 0 %}disabled{% endif %}>
+        {{ 'layout.cart.checkout' | t }}
+      </button>
+    </form>
+  </div>
+</aside>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    { "type": "image_picker", "id": "logo", "label": "Logo", "info": "Leave empty to use the HANAN wordmark bundled with the theme." },
+    { "type": "link_list", "id": "menu", "label": "Drawer menu", "default": "main-menu" }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,65 @@
+<section class="page">
+  {%- render 'breadcrumbs', trail: 'Your bag' -%}
+
+  <div class="wrap phead">
+    <span class="eyebrow">Your bag</span>
+    <h1 style="font-size:clamp(2.2rem,5vw,3.6rem)">{{ 'layout.cart.title' | t }}</h1>
+  </div>
+
+  <div class="wrap" style="max-width:900px;padding-bottom:var(--sec)">
+    {%- if cart.item_count > 0 -%}
+      <form action="{{ routes.cart_url }}" method="post" novalidate>
+        {%- for line in cart.items -%}
+          {%- assign line_hex = line.product.metafields.custom.swatch_hex.value | default: '#A18F7A' -%}
+          {%- assign line_style = line.product.metafields.custom.style_name.value | default: line.product.title -%}
+          {%- assign line_colour = line.product.metafields.custom.colour_name.value -%}
+          <div class="bag-item" style="padding-block:1.4rem;border-bottom:1px solid var(--line-soft)">
+            <div class="bag-thumb">
+              {%- if line.image -%}
+                {{ line.image | image_url: width: 240 | image_tag: loading: 'lazy', alt: line.title | escape }}
+              {%- else -%}
+                <svg viewBox="0 0 200 300" style="fill:{{ line_hex }};stroke:#F8F5F0"><use href="#robe"></use></svg>
+              {%- endif -%}
+            </div>
+            <div>
+              <h3 class="card-name" style="font-size:1.05rem">
+                <a href="{{ line.url }}">{{ line_style }}</a>
+              </h3>
+              <p class="card-col" style="margin:.2rem 0">
+                {%- if line_colour != blank -%}{{ line_colour }} · {% endif -%}
+                {{ 'products.product.size' | t }} {{ line.variant.title }}
+              </p>
+              <label class="small" for="qty-{{ forloop.index }}">{{ 'layout.cart.quantity' | t }}</label>
+              <input id="qty-{{ forloop.index }}" type="number" name="updates[]" value="{{ line.quantity }}"
+                     min="0" inputmode="numeric" style="width:5rem;padding:.5em;margin-top:.3rem">
+              <p style="margin-top:.5rem">
+                <a class="link" href="{{ line.url_to_remove }}" style="font-size:.6rem">{{ 'layout.cart.remove' | t }}</a>
+              </p>
+            </div>
+            <span class="card-price">{{ line.final_line_price | money }}</span>
+          </div>
+        {%- endfor -%}
+
+        <div class="bag-row" style="margin-top:2rem;font-size:1.1rem">
+          <span>{{ 'layout.cart.subtotal' | t }}</span>
+          <span>{{ cart.total_price | money }}</span>
+        </div>
+        <p class="small" style="margin-bottom:1.6rem">{{ 'layout.cart.tax_note' | t }}</p>
+
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+          <button class="btn" type="submit" name="update">Update bag</button>
+          <button class="btn solid" type="submit" name="checkout">{{ 'layout.cart.checkout' | t }}</button>
+        </div>
+      </form>
+    {%- else -%}
+      <div class="empty" style="padding-block:4rem">
+        <p>{{ 'layout.cart.empty' | t }}</p>
+        <a class="btn" href="{{ routes.all_products_collection_url }}">{{ 'layout.cart.start_shopping' | t }}</a>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{ "name": "Cart" }
+{% endschema %}

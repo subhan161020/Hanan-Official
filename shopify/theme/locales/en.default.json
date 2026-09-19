@@ -1,0 +1,130 @@
+{
+  "general": {
+    "accessibility": {
+      "skip_to_content": "Skip to content",
+      "close": "Close",
+      "open_menu": "Open menu",
+      "open_bag": "Open bag",
+      "previous_announcement": "Previous announcement",
+      "next_announcement": "Next announcement"
+    },
+    "breadcrumbs": { "home": "Home" },
+    "newsletter": {
+      "heading": "First to know",
+      "body": "Restocks, new drops and Eid pieces go to the list before they go to Instagram.",
+      "label": "Email address",
+      "button": "Join",
+      "success": "Thank you — you are on the list."
+    },
+    "search": { "heading": "Search", "placeholder": "Search abayas", "no_results": "No results for \"{{ terms }}\"." },
+    "404": {
+      "title": "Page not found",
+      "body": "The page you were looking for has moved or never existed.",
+      "link": "Back to the collections"
+    }
+  },
+  "layout": {
+    "cart": {
+      "title": "Your bag",
+      "empty": "Your bag is empty.",
+      "start_shopping": "Start shopping",
+      "subtotal": "Subtotal",
+      "tax_note": "Taxes included. Shipping calculated at checkout.",
+      "checkout": "Checkout",
+      "remove": "Remove",
+      "quantity": "Qty"
+    },
+    "customer": { "log_in": "Log in", "account": "Account", "log_out": "Log out" }
+  },
+  "products": {
+    "product": {
+      "colour": "Colour",
+      "size": "Size",
+      "size_chart": "Size chart",
+      "add_to_bag": "Add to bag",
+      "sold_out": "Sold out",
+      "unavailable": "Unavailable",
+      "choose_size": "Choose a size first.",
+      "adding": "Adding…",
+      "added": "Added to your bag",
+      "delivery_note": "Free UK delivery over £120 · 30-day returns",
+      "tax_note": "Taxes included. Shipping calculated at checkout.",
+      "between_sizes": "Between sizes? Take the larger. This style is cut generously through the bust.",
+      "nursing_friendly": "Nursing-friendly",
+      "about": "About this abaya",
+      "fabric_care": "Fabric & care",
+      "fit": "Fit & measurements",
+      "nursing_access": "Nursing access",
+      "delivery_returns": "Delivery & returns",
+      "you_may_also_like": "You may also like",
+      "more_from": "More from the collections"
+    }
+  },
+  "collections": {
+    "general": {
+      "no_products": "Nothing in this collection yet.",
+      "count": {
+        "one": "{{ count }} colourway",
+        "other": "{{ count }} colourways"
+      },
+      "styles": {
+        "one": "{{ count }} style",
+        "other": "{{ count }} styles"
+      }
+    }
+  },
+  "customer": {
+    "login": {
+      "title": "Log in",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Continue",
+      "forgot": "Forgot your password?",
+      "new_here": "New here? Your account is created the first time you order — you do not need to sign up before you shop.",
+      "continue_shopping": "Continue shopping",
+      "create": "Create an account"
+    },
+    "register": {
+      "title": "Create an account",
+      "first_name": "First name",
+      "last_name": "Last name",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Create account",
+      "already": "Already have an account?"
+    },
+    "account": {
+      "title": "Your account",
+      "orders": "Order history",
+      "no_orders": "You have not placed an order yet.",
+      "order": "Order",
+      "date": "Date",
+      "payment": "Payment",
+      "fulfillment": "Delivery",
+      "total": "Total",
+      "addresses": "Addresses",
+      "view_address": "View addresses"
+    },
+    "recover": {
+      "title": "Reset your password",
+      "body": "We will email you a link to set a new one.",
+      "submit": "Send the link",
+      "cancel": "Back to log in",
+      "success": "Check your email for the reset link."
+    },
+    "order": { "title": "Order {{ name }}", "placed": "Placed on {{ date }}" }
+  },
+  "contact": {
+    "form": {
+      "name": "Your name",
+      "email": "Email",
+      "order": "Order number",
+      "order_hint": "(if you have one)",
+      "subject": "What is it about?",
+      "message": "Message",
+      "send": "Send message",
+      "success": "Thank you — a real person will reply within one working day.",
+      "error": "Please fill in the required fields."
+    }
+  }
+}
