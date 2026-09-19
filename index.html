@@ -96,17 +96,25 @@ p{margin:0 0 1.1em}
   letter-spacing:.26em;text-transform:uppercase;
   padding:1.05em 2.4em;border:1px solid var(--ink);color:var(--ink);
   background:transparent;transition:.45s var(--ease);position:relative;overflow:hidden;
+  /* the fill below is a z-index:-1 pseudo-element, so the button has to be its
+     own stacking context. Without this it paints behind any ancestor that has a
+     background of its own (.hero, .feature-art, .ftr) and behind .solid's own
+     background — the fill never shows, while :hover still flips the text to the
+     colour meant to sit on it, leaving ivory-on-ivory. */
+  isolation:isolate;
 }
 .btn::after{content:"";position:absolute;inset:0;background:var(--ink);
   transform:translateY(101%);transition:transform .45s var(--ease);z-index:-1}
 .btn:hover::after{transform:translateY(0)}
 .btn:hover{color:var(--ivory)}
 .btn.gold{border-color:var(--gold);color:var(--gold)}
-.btn.gold::after{background:var(--gold)}
+/* the fill carries white text, so it uses the deeper gold — #AB7A37 leaves
+   white at 3.8:1, below the 4.5:1 this size of type needs. */
+.btn.gold::after{background:var(--gold-dp)}
 .btn.gold:hover{color:#fff}
 .btn.solid{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
-.btn.solid::after{background:var(--gold)}
-.btn.solid:hover{color:#fff;border-color:var(--gold)}
+.btn.solid::after{background:var(--gold-dp)}
+.btn.solid:hover{color:#fff;border-color:var(--gold-dp)}
 .btn.light{border-color:rgba(248,245,240,.55);color:var(--ivory)}
 .btn.light::after{background:var(--ivory)}
 .btn.light:hover{color:var(--ink)}
@@ -510,7 +518,7 @@ td:first-child{font-family:var(--display);font-size:1.15rem;color:var(--gold-dp)
   font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;
   padding:.75em 1.5em;border:1px solid var(--line-soft);transition:.3s
 }
-.filters button:hover{border-color:var(--gold);color:var(--gold)}
+.filters button:hover{border-color:var(--gold);color:var(--gold-dp)}
 .filters button.on{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
 
 /* ---------- build notes (only appear when this file is opened locally) ---------- */
