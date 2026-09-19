@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hanan-official",
+  "compatibility_date": "2026-09-19",
+  "observability": {
+    "enabled": true
+  },
+  // Serves this folder as a static site. Everything at the repo root is
+  // published except what .assetsignore excludes, so index.html, the story
+  // video and its poster, and the three illustrations all ship together.
+  "assets": {
+    "directory": "."
+  }
+}

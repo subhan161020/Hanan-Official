@@ -1,0 +1,7 @@
+.git
+node_modules
+.DS_Store
+# Repo furniture — these would otherwise be served at the site's own URL.
+README.md
+wrangler.jsonc
+.assetsignore
