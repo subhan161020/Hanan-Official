@@ -116,31 +116,15 @@ Products → Collections. Both automated, matching on **Product tag**:
 
 The import already sets those tags.
 
-## 5. Build the menus
+## 5. Create the pages
 
-Content → Menus.
+Content → Pages. **The handle matters** — it is what picks the template, so
+a typo means the page renders as a plain page instead of its designed one.
+Shopify derives the handle from the title, but shows it under "Search engine
+listing" at the bottom of the page editor, where you can correct it.
 
-**Main menu** (`main-menu`) — this is the slide-out drawer:
-
-- Home → `/`
-- About → `/pages/about`
-- Shop all → `/collections/all`
-- Abayas → `/collections/all`, with two nested items:
-  - Everyday abaya → `/collections/everyday`
-  - Occasion abaya → `/collections/occasion`
-- Size chart → `/pages/size-chart`
-- Contact us → `/pages/contact`
-
-**Shop filters** (`shop-filters`) — the filter row on collection pages:
-All → `/collections/all`, Everyday → `/collections/everyday`,
-Occasion → `/collections/occasion`.
-
-**Footer** (`footer`) and a second menu for the Help column, matching the
-original: size chart, contact, delivery, returns, privacy, account.
-
-## 6. Create the pages
-
-Content → Pages. The handle matters — it picks the template.
+Do this before the menus: Shopify's link picker only offers pages that
+already exist.
 
 | Title | Handle | Template | Body content |
 |---|---|---|---|
@@ -148,6 +132,82 @@ Content → Pages. The handle matters — it picks the template.
 | Size chart | `size-chart` | `page.size-chart` | Leave empty — the table is in the theme. |
 | Contact us | `contact` | `page.contact` | Leave empty. |
 | Policies | `policies` | `page.policies` | Leave empty — it reads Settings → Policies. |
+
+## 6. Build the menus
+
+Content → Menus. Shopify has already created two of these — **Main menu** and
+a footer one — so two get edited and two get created.
+
+**The handle is what matters.** The theme looks each menu up by handle, and
+Shopify derives the handle from the title when you first save. Get the title
+right and the handle follows. A handle that does not match renders that part
+of the site empty rather than throwing an error, so it is easy to miss.
+
+When adding items, click **Add menu item** and use the picker in the Link
+field — pick Collections, Pages or Home rather than typing a path by hand.
+The picker only offers things that exist, which is the reason pages came first.
+
+### Main menu — handle `main-menu`
+
+The slide-out drawer behind the ☰ button.
+
+| Item | Links to |
+|---|---|
+| Home | Home |
+| About | Pages → About |
+| Shop all | Collections → All products |
+| Abayas | Collections → All products |
+| ↳ Everyday abaya | Collections → Everyday abaya |
+| ↳ Occasion abaya | Collections → Occasion abaya |
+| Size chart | Pages → Size chart |
+| Contact us | Pages → Contact us |
+
+The two indented items sit **underneath** Abayas. Add them as ordinary items
+first, then drag each one slightly to the right — Shopify nests it and shows
+it indented. The theme renders nested items as the smaller sub-links the
+original site had under "Abayas".
+
+Log in is not in this list. The theme adds it on its own, and switches it to
+"Account" once someone is signed in.
+
+### Shop filters — handle `shop-filters`
+
+Create a new menu, titled exactly **Shop filters**. This is the
+All / Everyday / Occasion row above the product grid, which replaces the
+filter buttons on the original site.
+
+| Item | Links to |
+|---|---|
+| All | Collections → All products |
+| Everyday | Collections → Everyday abaya |
+| Occasion | Collections → Occasion abaya |
+
+### Footer — handle `footer`
+
+Edit the one Shopify made. This is the footer's **Shop** column.
+
+| Item | Links to |
+|---|---|
+| Shop all | Collections → All products |
+| Everyday abaya | Collections → Everyday abaya |
+| Occasion abaya | Collections → Occasion abaya |
+
+### Help — handle `help`
+
+Create a new menu, titled exactly **Help**. The footer's second column.
+
+| Item | Links to |
+|---|---|
+| Size chart | Pages → Size chart |
+| Contact us | Pages → Contact us |
+| Delivery | Pages → Policies |
+| Returns | Pages → Policies |
+| Privacy | Pages → Policies |
+
+Then point the footer at it: **Online Store → Themes → Customise → Footer**,
+open the second menu column, set Heading to `Help` and Menu to `Help`. The
+theme ships both footer columns pointing at `footer`, so until you change
+this one the Shop links appear twice.
 
 ## 7. Paste the policies
 
