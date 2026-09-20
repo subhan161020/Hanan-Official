@@ -199,6 +199,20 @@ store. Check that banner is still there before you publish; if it has gone,
 set the password back under **Online Store → Preferences → Restrict access**
 until you are ready.
 
+### Seeing the store while it is password-protected
+
+Visiting the storefront URL now returns a password gate — that is the
+restricted access working, not a fault. Two ways through:
+
+- **Preview from the admin.** Click the eye icon beside **Online Store** in
+  the sidebar, or **Online Store → Themes → ⋯ → Preview** on the theme you
+  want. This opens the storefront with the gate bypassed, and is the quicker
+  route while building.
+- **Use the password.** **Online Store → Preferences**, scroll to the
+  restricted-access section, and the password is there. Type it into the
+  gate and the browser remembers it for that session. This is also the
+  password to hand anyone you want to show the store to before launch.
+
 Expect the store to look incomplete right after publishing: no pages, no
 menus, and products still in draft. Steps 6 and 7 fill that in.
 
