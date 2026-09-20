@@ -19,7 +19,7 @@
           The founder's story lives in the page body in the Shopify admin, so
           it can be edited without touching the theme.
         {%- endcomment -%}
-        {{ page.content }}
+        <div class="rte">{{ page.content }}</div>
 
         {%- if section.settings.signoff != blank -%}
           <div class="rule" style="margin-block:3rem 2.4rem"><i class="dot"></i></div>

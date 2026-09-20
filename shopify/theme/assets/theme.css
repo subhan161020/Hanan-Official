@@ -841,3 +841,20 @@ label.size{cursor:pointer;display:inline-flex;align-items:center;justify-content
     var(--ivory) calc(50% + 1px),transparent calc(50% + 1px));
 }
 .colsw.out:hover{transform:none}
+
+/* ---------- rich text from the Shopify admin ----------
+   Page bodies are written in Shopify's editor, which strips inline styles.
+   The base rule sets headings to margin:0 — right for the designed sections,
+   wrong for prose — so spacing is restored here rather than in the content,
+   which keeps what gets pasted into the admin clean and portable. */
+.rte > :first-child{margin-top:0}
+.rte h2{margin:0 0 1.2rem}
+.rte h3{margin:2.6rem 0 1rem}
+.rte h4{margin:2rem 0 .8rem}
+.rte p{margin:0 0 1.1em}
+.rte ul,.rte ol{margin:0 0 1.2em;padding-left:1.2rem}
+.rte li{margin-bottom:.4em}
+.rte a{border-bottom:1px solid var(--line)}
+.rte img{margin:1.6rem 0;border-radius:2px}
+.rte blockquote{margin:1.6rem 0;padding-left:1.2rem;border-left:2px solid var(--line);
+  font-family:var(--display);font-size:1.15rem;color:var(--ink-2)}

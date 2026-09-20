@@ -12,6 +12,7 @@ renders real products.
 shopify/
 ├── theme/              the site rebuilt as a Shopify theme
 ├── make-theme-zip.sh   packs theme/ for Shopify's zip upload
+├── content/            paste-ready page bodies
 ├── products.csv        12 colourways × 4 sizes = 48 variants
 └── policies/           delivery, returns and privacy, ready to paste
 ```
@@ -226,10 +227,16 @@ The template is set in the page editor's right-hand column, under
 
 | Title | Handle | Template | Body content |
 |---|---|---|---|
-| About | `about` | `page.about` | The founder's story. Paste it from `index.html`, the About section. |
+| About | `about` | `page.about` | Paste `content/about.html` — see below. |
 | Size chart | `size-chart` | `page.size-chart` | Leave empty — the table is in the theme. |
 | Contact *(the one that exists)* | `contact` | `page.contact` | Leave empty. |
 | Policies | `policies` | `page.policies` | Leave empty — it reads Settings → Policies. |
+
+Only About takes body content. Open it, click the `<>` button in the editor
+toolbar to switch to HTML, and paste `content/about.html` whole. Its heading,
+the Arabic lede and the founder sign-off are **not** in that file — they come
+from the theme and are already filled in, so pasting them again would double
+them up. `content/README.md` says which is which.
 
 ## 7. Build the menus
 
