@@ -8,6 +8,7 @@
 
   Takes: product, style_group, as_links (true on a product page, false on a card)
 {%- endcomment -%}
+{%- assign sold_out_label = 'products.product.sold_out' | t -%}
 {%- if style_group != blank -%}
   {%- assign siblings = collections.all.products | where: 'metafields.custom.style_group.value', style_group -%}
   {%- if siblings.size == 0 -%}{%- assign siblings = collections.all.products -%}{%- endif -%}
@@ -15,15 +16,27 @@
     {%- if sib.metafields.custom.style_group.value != style_group -%}{%- continue -%}{%- endif -%}
     {%- assign sib_hex = sib.metafields.custom.swatch_hex.value | default: '#A18F7A' -%}
     {%- assign sib_colour = sib.metafields.custom.colour_name.value | default: sib.title -%}
+    {%- comment -%}
+      Each colourway is its own product, so a sold-out one is still a link
+      its siblings point at. Mark it, or the swatch row offers something
+      that cannot be bought. It stays a link: the page itself says sold out,
+      and that is where someone goes to ask about a restock.
+    {%- endcomment -%}
+    {%- if sib.available -%}
+      {%- assign sib_label = sib_colour -%}
+    {%- else -%}
+      {%- assign sib_label = sib_colour | append: ' — ' | append: sold_out_label -%}
+    {%- endif -%}
     {%- if as_links -%}
       <a href="{{ sib.url }}"
-         class="colsw{% if sib.id == product.id %} on{% endif %}"
+         class="colsw{% if sib.id == product.id %} on{% endif %}{% unless sib.available %} out{% endunless %}"
          style="background:{{ sib_hex }}"
-         title="{{ sib_colour | escape }}"
-         aria-label="{{ sib_colour | escape }}"
+         title="{{ sib_label | escape }}"
+         aria-label="{{ sib_label | escape }}"
          {% if sib.id == product.id %}aria-current="page"{% endif %}></a>
     {%- else -%}
-      <span class="sw" style="background:{{ sib_hex }}" title="{{ sib_colour | escape }}"></span>
+      <span class="sw{% unless sib.available %} out{% endunless %}"
+            style="background:{{ sib_hex }}" title="{{ sib_label | escape }}"></span>
     {%- endif -%}
   {%- endfor -%}
 {%- endif -%}

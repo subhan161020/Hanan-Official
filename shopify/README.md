@@ -78,11 +78,32 @@ Everything lands in a state that cannot sell:
 | `Variant Grams` | `0` | Weight drives courier rates — a guess mis-charges postage. |
 | `Image Src` | empty | There is no product photography yet. |
 
-Each colourway is its own product, mirroring the original site. The
-alternative — three products with Colour × Size as 16 variants — is more
-conventional and easier to read in the admin, but it collapses twelve shop
-cards into three and changes every product URL. **Decide before importing**,
-because changing it later means redoing the products.
+### How the catalogue is modelled
+
+**Settled: each colourway is its own product**, twelve in all, mirroring the
+original site. Handles match the old `#/product/<id>` slugs, so the shop grid
+keeps its twelve cards and every product URL survives the move.
+
+The alternative was three products with Colour × Size as sixteen variants —
+more conventional, and easier to read in the admin. It was rejected because
+it collapses the twelve shop cards into three and changes every product URL.
+
+Two things follow from that choice, both already handled:
+
+- **Each product page needs its own words.** Four pages per style sharing one
+  description is how Google decides three of them are duplicates and ranks
+  one. The SEO descriptions are colour-specific, so all twelve differ. The
+  body text is still shared within a style — colour-specific photography and
+  a line or two of your own copy per colourway is what fully separates them.
+- **Sold-out colourways are marked in the swatch row.** Because colourways are
+  separate products rather than variants, Shopify will not grey them out for
+  you; a sold-out swatch would otherwise look buyable. It is struck through
+  and says so, and still links, since that page is where someone asks about
+  a restock.
+
+If the range ever grows past a few dozen products, give each style its own
+automated collection and point `snippets/sibling-swatches.liquid` at that
+instead of scanning every product.
 
 ## 4. Create the collections
 

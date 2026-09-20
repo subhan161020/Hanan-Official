@@ -826,3 +826,18 @@ label.size{cursor:pointer;display:inline-flex;align-items:center;justify-content
 .acct-table th{font-family:var(--sans);font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft)}
 .form-errors{color:var(--gold-dp);font-size:.85rem;margin-bottom:1rem}
 .form-errors ul{margin:0;padding-left:1.1rem}
+
+/* ---------- sold-out colourways ----------
+   Each colourway is its own product, so the swatch row links across to
+   products that may have sold out. A struck-through swatch says so before
+   the visitor clicks. The diagonal is drawn rather than an image so it
+   sits correctly on any swatch colour. */
+.colsw.out,.sw.out{opacity:.45}
+.colsw.out{position:relative}
+.colsw.out::before{
+  content:"";position:absolute;inset:0;border-radius:50%;
+  background:linear-gradient(to top left,
+    transparent calc(50% - 1px),var(--ivory) calc(50% - 1px),
+    var(--ivory) calc(50% + 1px),transparent calc(50% + 1px));
+}
+.colsw.out:hover{transform:none}
