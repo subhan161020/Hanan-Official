@@ -40,8 +40,17 @@ covers the platform. That is the number to hold onto.
 ## 2. Create the metafield definitions
 
 **Do this before importing, or the swatches and the product accordions come
-up empty.** Settings → Custom data → Products → Add definition. For each
-one, namespace `custom`, and the key and type exactly as listed:
+up empty.**
+
+**Settings → Custom data → Products → Add definition.**
+
+Not Content → Metaobjects. Those are a different feature — metaobjects are
+standalone records you define from scratch, metafields are extra fields added
+to something that already exists, which is what the products need. If you find
+yourself on a Metaobjects screen, you are in the wrong place.
+
+For each one below, set the namespace to `custom`, and the key and type
+exactly as listed:
 
 | Key | Type |
 |---|---|
@@ -118,8 +127,14 @@ The import already sets those tags.
 
 ## 5. Create the pages
 
-Content → Pages. **The handle matters** — it is what picks the template, so
-a typo means the page renders as a plain page instead of its designed one.
+**Online Store → Pages.** Not under Content — that holds Metaobjects, Files,
+Menus and Blog posts, but not Pages. Shopify has moved Pages between Content
+and Online Store across admin versions, so if it is not where you expect:
+press <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>K</kbd> and search "Pages", or go
+straight to `admin.shopify.com/store/<your-store>/pages`.
+
+**The handle matters** — it is what picks the template, so a typo means the
+page renders as a plain page instead of its designed one.
 Shopify derives the handle from the title, but shows it under "Search engine
 listing" at the bottom of the page editor, where you can correct it.
 
