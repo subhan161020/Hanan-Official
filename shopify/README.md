@@ -304,7 +304,16 @@ The slide-out drawer behind the ☰ button.
 | ↳ Everyday abaya | Collections → Everyday abaya |
 | ↳ Occasion abaya | Collections → Occasion abaya |
 | Size chart | Pages → Size chart |
-| Contact us | Pages → Contact us |
+| Contact us | Pages → Contact |
+
+The left column is the wording shown in the drawer; the right is what to
+pick in the Link field. They do not have to match — the menu item reads
+"Contact us" while the page it points at is titled "Contact".
+
+Shopify starts this menu with **Home, Catalog and Contact**. Keep Home,
+rename Catalog to "Shop all" and Contact to "Contact us", then add the rest.
+Leave the **Name** field at the top of the page alone — the `main-menu`
+handle comes from it.
 
 The two indented items sit **underneath** Abayas. Add them as ordinary items
 first, then drag each one slightly to the right — Shopify nests it and shows
