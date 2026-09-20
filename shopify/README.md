@@ -10,9 +10,10 @@ renders real products.
 
 ```
 shopify/
-├── theme/          the site rebuilt as a Shopify theme
-├── products.csv    12 colourways × 4 sizes = 48 variants
-└── policies/       delivery, returns and privacy, ready to paste
+├── theme/              the site rebuilt as a Shopify theme
+├── make-theme-zip.sh   packs theme/ for Shopify's zip upload
+├── products.csv        12 colourways × 4 sizes = 48 variants
+└── policies/           delivery, returns and privacy, ready to paste
 ```
 
 ---
@@ -125,21 +126,69 @@ Products → Collections. Both automated, matching on **Product tag**:
 
 The import already sets those tags.
 
-## 5. Push the theme
+## 5. Get the theme onto the store
 
 Do this before creating the pages. A page can only be given a template that
 the **published** theme defines, so until HANAN is up and published, the
 `page.about` and `page.size-chart` options simply are not in the dropdown.
 
+There are two ways in. **Route A needs no command line and is the one to
+start with.** Route B is worth setting up later, when you are changing the
+theme often enough that uploading a file each time gets tiring.
+
+### Route A — upload a zip (no terminal)
+
+**Build the zip.** From this folder, run `./make-theme-zip.sh`, or just zip
+the contents of `theme/` yourself. One thing matters: the folders
+`assets`, `config`, `layout`, `locales`, `sections`, `snippets` and
+`templates` must sit at the **top level of the zip**, not inside a wrapper
+folder. Shopify rejects the upload otherwise.
+
+> On a Mac, selecting the `theme` folder and choosing "Compress" gives you a
+> zip with `theme/` wrapped around everything, which Shopify will not take.
+> Open the folder, select the seven folders inside it, and compress those.
+
+**Upload it.** Online Store → Themes → **Add theme → Upload zip file** →
+choose the file → Upload. It appears in the theme list, unpublished.
+
+**Publish it.** Find HANAN in the list → **Actions → Publish**.
+
+To change the theme later, build a new zip and upload it again — it arrives
+as a separate theme, so publish the new one and delete the old.
+
+### Route B — the Shopify CLI
+
+Worth it for live reload while editing, and for pushing changes without
+rebuilding a zip. It needs a terminal and Node.js.
+
+1. **Install Node.js** from [nodejs.org](https://nodejs.org) — take the LTS
+   version. This gives you `npm`, which installs the Shopify CLI.
+2. **Open a terminal.** macOS: Terminal, in Applications → Utilities.
+   Windows: PowerShell, from the Start menu.
+3. **Install the CLI** — `npm install -g @shopify/cli@latest`
+4. **Go to the theme folder.** Type `cd ` (with the space), then drag the
+   `theme` folder from Finder or Explorer onto the terminal window — it
+   fills in the path for you — then press Enter.
+5. **Check and push:**
+
 ```sh
-npm install -g @shopify/cli@latest      # once, per machine
-cd shopify/theme
 shopify theme check                     # should report only the 3 font warnings
 shopify theme push --store your-store.myshopify.com --unpublished
 ```
 
-The first push opens a browser to log you in. Then publish it:
-**Online Store → Themes →** find HANAN **→ Actions → Publish**.
+Your store URL is the `.myshopify.com` one, not a custom domain. It is in
+the admin under **Settings → Domains**, and in the browser address bar while
+you are in the admin.
+
+The first push opens a browser to log you in. Then publish as in Route A.
+
+For live reload while editing: `shopify theme dev --store your-store.myshopify.com`.
+
+### Either way
+
+`shopify theme check` is Shopify's own linter. It is clean on this theme
+apart from three `RemoteAsset` warnings about the Google Fonts link — see
+"Known warnings" below. Anything else means something broke in transit.
 
 **Publishing now is safe.** A trial store shows "Store access is restricted —
 only visitors with the password can access your online store" at the top of
@@ -149,11 +198,8 @@ store. Check that banner is still there before you publish; if it has gone,
 set the password back under **Online Store → Preferences → Restrict access**
 until you are ready.
 
-`shopify theme check` is Shopify's own linter, and clean here apart from
-three `RemoteAsset` warnings about the Google Fonts link — see
-"Known warnings" below. Anything else means something broke in transit.
-
-To work on it with live reload: `shopify theme dev --store your-store.myshopify.com`.
+Expect the store to look incomplete right after publishing: no pages, no
+menus, and products still in draft. Steps 6 and 7 fill that in.
 
 ## 6. Create the pages
 
