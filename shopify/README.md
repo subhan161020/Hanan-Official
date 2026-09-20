@@ -125,7 +125,41 @@ Products → Collections. Both automated, matching on **Product tag**:
 
 The import already sets those tags.
 
-## 5. Create the pages
+## 5. Push the theme
+
+Do this before creating the pages. A page can only be given a template that
+the **published** theme defines, so until HANAN is up and published, the
+`page.about` and `page.size-chart` options simply are not in the dropdown.
+
+```sh
+npm install -g @shopify/cli@latest      # once, per machine
+cd shopify/theme
+shopify theme push --store your-store.myshopify.com --unpublished
+```
+
+The first push opens a browser to log you in. Then publish it:
+**Online Store → Themes →** find HANAN **→ Actions → Publish**.
+
+**Publishing now is safe.** A trial store shows "Store access is restricted —
+only visitors with the password can access your online store" at the top of
+the admin. Nobody can see the shop without the password until you choose a
+plan and lift it, so there is no window where customers meet a half-built
+store. Check that banner is still there before you publish; if it has gone,
+set the password back under **Online Store → Preferences → Restrict access**
+until you are ready.
+
+To work on it with live reload: `shopify theme dev --store your-store.myshopify.com`.
+
+Check it with Shopify's own linter before pushing:
+
+```sh
+shopify theme check
+```
+
+It should report only three `RemoteAsset` warnings, for the Google Fonts
+link — see "Known warnings" below.
+
+## 6. Create the pages
 
 **Online Store → Pages.** Not under Content — that holds Metaobjects, Files,
 Menus and Blog posts, but not Pages. Shopify has moved Pages between Content
@@ -134,12 +168,19 @@ press <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>K</kbd> and search "Pages", or go
 straight to `admin.shopify.com/store/<your-store>/pages`.
 
 **The handle matters** — it is what picks the template, so a typo means the
-page renders as a plain page instead of its designed one.
-Shopify derives the handle from the title, but shows it under "Search engine
-listing" at the bottom of the page editor, where you can correct it.
+page renders as a plain page instead of its designed one. Shopify derives the
+handle from the title, but shows it under "Search engine listing" at the
+bottom of the page editor, where you can correct it.
 
 Do this before the menus: Shopify's link picker only offers pages that
 already exist.
+
+**Shopify has already made a Contact page.** Open that one and edit it rather
+than adding a second — two pages competing for the `contact` handle leaves the
+later one as `contact-1`, which no menu link or template will match.
+
+The template is set in the page editor's right-hand column, under
+**Online store → Theme template**.
 
 | Title | Handle | Template | Body content |
 |---|---|---|---|
@@ -148,7 +189,7 @@ already exist.
 | Contact us | `contact` | `page.contact` | Leave empty. |
 | Policies | `policies` | `page.policies` | Leave empty — it reads Settings → Policies. |
 
-## 6. Build the menus
+## 7. Build the menus
 
 Content → Menus. Shopify has already created two of these — **Main menu** and
 a footer one — so two get edited and two get created.
@@ -224,12 +265,12 @@ open the second menu column, set Heading to `Help` and Menu to `Help`. The
 theme ships both footer columns pointing at `footer`, so until you change
 this one the Shop links appear twice.
 
-## 7. Paste the policies
+## 8. Paste the policies
 
 Settings → Policies. Use the drafts in `policies/`, and read that folder's
 README first — several gaps have to be filled before they are publishable.
 
-## 8. Upload the film
+## 9. Upload the film
 
 Content → Files → Upload `hanan-story.mp4`, then copy its link.
 
@@ -237,29 +278,6 @@ Shopify does **not** accept `.mp4` as a theme asset, which is why the film
 is not bundled with the theme. Paste the link into the theme editor under
 the Story video section. Without it, that section renders its text half only
 rather than an empty frame.
-
-## 9. Push the theme
-
-```sh
-npm install -g @shopify/cli@latest      # once, per machine
-cd shopify/theme
-shopify theme push --store your-store.myshopify.com --unpublished
-```
-
-The first push asks you to log in through the browser. `--unpublished`
-uploads it as a draft, so the store's current theme stays live until you
-choose to switch.
-
-To work on it with live reload: `shopify theme dev --store your-store.myshopify.com`.
-
-Check it with Shopify's own linter before pushing:
-
-```sh
-shopify theme check
-```
-
-It should report only three `RemoteAsset` warnings, for the Google Fonts
-link — see "Known warnings" below.
 
 ## 10. Test a real order before taking real money
 
