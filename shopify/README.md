@@ -127,6 +127,16 @@ Products → Collections. Both automated, matching on **Product tag**:
 
 The import already sets those tags.
 
+**The collections will look empty on the storefront, and that is correct.**
+The admin shows all twelve products in them, but the import deliberately
+left every product as a draft, and drafts are not served to visitors. The
+shop stays empty until the products are published — which waits on real
+prices, real stock and photography. See "Still outstanding" at the end.
+
+Menus and templates do not care about this: a collection exists as soon as
+you create it, so step 7 can link to it whether or not anything is visible
+inside yet.
+
 ## 5. Get the theme onto the store
 
 Do this before creating the pages. A page can only be given a template that
