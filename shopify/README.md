@@ -134,6 +134,7 @@ the **published** theme defines, so until HANAN is up and published, the
 ```sh
 npm install -g @shopify/cli@latest      # once, per machine
 cd shopify/theme
+shopify theme check                     # should report only the 3 font warnings
 shopify theme push --store your-store.myshopify.com --unpublished
 ```
 
@@ -148,16 +149,11 @@ store. Check that banner is still there before you publish; if it has gone,
 set the password back under **Online Store → Preferences → Restrict access**
 until you are ready.
 
+`shopify theme check` is Shopify's own linter, and clean here apart from
+three `RemoteAsset` warnings about the Google Fonts link — see
+"Known warnings" below. Anything else means something broke in transit.
+
 To work on it with live reload: `shopify theme dev --store your-store.myshopify.com`.
-
-Check it with Shopify's own linter before pushing:
-
-```sh
-shopify theme check
-```
-
-It should report only three `RemoteAsset` warnings, for the Google Fonts
-link — see "Known warnings" below.
 
 ## 6. Create the pages
 
@@ -186,7 +182,7 @@ The template is set in the page editor's right-hand column, under
 |---|---|---|---|
 | About | `about` | `page.about` | The founder's story. Paste it from `index.html`, the About section. |
 | Size chart | `size-chart` | `page.size-chart` | Leave empty — the table is in the theme. |
-| Contact us | `contact` | `page.contact` | Leave empty. |
+| Contact *(the one that exists)* | `contact` | `page.contact` | Leave empty. |
 | Policies | `policies` | `page.policies` | Leave empty — it reads Settings → Policies. |
 
 ## 7. Build the menus
