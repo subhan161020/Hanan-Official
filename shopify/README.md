@@ -232,8 +232,23 @@ The template is set in the page editor's right-hand column, under
 | Contact *(the one that exists)* | `contact` | `page.contact` | Leave empty. |
 | Policies | `policies` | `page.policies` | Leave empty — it reads Settings → Policies. |
 
-Only About takes body content. Open it, click the `<>` button in the editor
-toolbar to switch to HTML, and paste `content/about.html` whole. Its heading,
+Only About takes body content. Open it, and in the **Content** toolbar click
+the **`</>`** button at the far right — past the ⋯ — to switch to HTML.
+Paste `content/about.html` whole, then click the button again to see it
+laid out. Pasting into the visual editor instead turns the headings into
+plain bold text, which the theme will not space and Google will not read as
+headings.
+
+**Set Visibility to Visible.** New pages can land on Hidden, and a hidden
+page returns a 404 even to you — the password on the store is what keeps
+customers out, not this setting.
+
+**Fill in the meta description** under Search engine listing. It is what
+Google shows beneath the link, and it is empty by default. For About:
+
+> HANAN began with a need one mother could not find on the market — an abaya
+> with nursing access concealed entirely within the design. Designed in East
+> London. Its heading,
 the Arabic lede and the founder sign-off are **not** in that file — they come
 from the theme and are already filled in, so pasting them again would double
 them up. `content/README.md` says which is which.
