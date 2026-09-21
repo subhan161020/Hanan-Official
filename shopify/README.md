@@ -407,21 +407,33 @@ configured here. Do this before the test order, or the test proves nothing.
 
 ### Shipping — Settings → Shipping and delivery
 
-Match the policy exactly:
+The rates are **not on this page**. Click **General profile** under "Store
+default" — the row showing All products / 1 location / 3 zones. That opens
+the profile, and the zones and their rates are inside it.
 
-| Zone | Rate | Price | Condition |
-|---|---|---|---|
-| United Kingdom | Royal Mail Tracked 48 | £3.95 | free when order is over £120 |
-| United Kingdom | Royal Mail Tracked 24 | £5.95 | — |
-| Rest of world | by weight | — | as you decide |
+In the **United Kingdom** zone, delete whatever rate Shopify seeded and add
+three, each with **Add rate → Set your own rates**:
 
-**The free-over-£120 threshold must exist as a rate condition**, not only as
-a line in the announcement bar. Add the £3.95 rate, then a second rate at
-£0.00 with a minimum order price of £120.
+| Rate name | Price | Condition |
+|---|---|---|
+| Royal Mail Tracked 48 | £3.95 | order price **maximum £119.99** |
+| Free UK delivery (Tracked 48) | £0.00 | order price **minimum £120** |
+| Royal Mail Tracked 24 | £5.95 | none |
 
-This is also where the zero weights from the import bite: international
-rates calculate by weight, and every variant currently weighs nothing. Weigh
-one of each style before turning international shipping on.
+**Both conditions matter.** A minimum on the free rate alone leaves the
+£3.95 rate showing next to it on a £150 order — the customer picks free, but
+the checkout reads as though you were hoping they would not notice. The
+maximum on the paid rate makes exactly one of the two appear at a time.
+
+Tracked 24 carries no condition, so it is offered at every order value as
+the paid upgrade.
+
+**The other zones need attention or removal.** A zone with no rate tells
+customers there that no delivery is available, at checkout, after they have
+filled in an address. And the import set every variant to zero grams, so a
+weight-based rate would drop everything into the cheapest bracket. Until you
+have weighed each style, either give international zones a flat rate you are
+confident covers the postage, or delete the zones and sell UK-only for now.
 
 ### Tax — Settings → Taxes and duties
 
