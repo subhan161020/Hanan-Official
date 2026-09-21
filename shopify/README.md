@@ -359,10 +359,17 @@ Create a new menu, titled exactly **Help**. The footer's second column.
 | Returns | Pages → Policies |
 | Privacy | Pages → Policies |
 
-Then point the footer at it: **Online Store → Themes → Customise → Footer**,
-open the second menu column, set Heading to `Help` and Menu to `Help`. The
-theme ships both footer columns pointing at `footer`, so until you change
-this one the Shop links appear twice.
+Then point the footer at it: **Online Store → Themes**, and click
+**Edit theme** on the **live** theme at the top of the page — not on one of
+the cards under "Draft themes", which edits a copy nobody is looking at.
+Re-uploading a zip leaves the superseded version sitting there under a
+near-identical name, so check which one you are opening. Deleting the old
+draft once the new one is live saves picking wrong later.
+
+In the editor: **Footer** in the left panel → the **second** menu column →
+set Heading to `Help` and Menu to `Help` → Save. The theme ships both
+footer columns pointing at `footer`, so until you change this one the Shop
+links appear twice.
 
 ## 8. Paste the policies
 
