@@ -337,7 +337,9 @@ filter buttons on the original site.
 
 ### Footer — handle `footer`
 
-Edit the one Shopify made. This is the footer's **Shop** column.
+Edit the one Shopify made. It arrives with its own default items — delete or
+rename them, the same as with the main menu. This is the footer's **Shop**
+column.
 
 | Item | Links to |
 |---|---|
@@ -352,7 +354,7 @@ Create a new menu, titled exactly **Help**. The footer's second column.
 | Item | Links to |
 |---|---|
 | Size chart | Pages → Size chart |
-| Contact us | Pages → Contact us |
+| Contact us | Pages → Contact |
 | Delivery | Pages → Policies |
 | Returns | Pages → Policies |
 | Privacy | Pages → Policies |
