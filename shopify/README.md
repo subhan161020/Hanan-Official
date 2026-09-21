@@ -379,31 +379,83 @@ the links are simply the wrong ones.
 
 ## 8. Paste the policies
 
-Settings → Policies. Use the drafts in `policies/`, and read that folder's
-README first — several gaps have to be filled before they are publishable.
+**Settings → Policies.** Four slots, four files in `policies/`:
+`shipping.md`, `refund.md`, `privacy.md`, `terms.md`. Paste each into
+its own slot.
 
-## 9. Upload the film
+Read `policies/README.md` first. These are drafts written to reflect UK
+consumer law, not legal advice, and three things have to be filled in before
+they are publishable:
 
-Content → Files → Upload `hanan-story.mp4`, then copy its link.
+- **`refund.md`** — your email address, in place of `[your email address]`,
+  and your real returns address.
+- **`privacy.md`** — your ICO registration number, your data retention
+  periods, and your processor list. That list changes with this move:
+  Shopify now does hosting, checkout and customer accounts, and Cloudflare
+  comes off it.
+- **`terms.md`** — not drafted. Shopify has a template under
+  Settings → Policies → Terms of service → "Create from template".
 
-Shopify does **not** accept `.mp4` as a theme asset, which is why the film
-is not bundled with the theme. Paste the link into the theme editor under
-the Story video section. Without it, that section renders its text half only
-rather than an empty frame.
+One paragraph in `refund.md` is marked not to remove: if the 14-day
+cancellation right is stated wrongly or left out, the cancellation period
+extends to twelve months by law.
 
-## 10. Test a real order before taking real money
+## 9. Set up shipping and tax
+
+The site makes two promises at checkout that only come true if they are
+configured here. Do this before the test order, or the test proves nothing.
+
+### Shipping — Settings → Shipping and delivery
+
+Match the policy exactly:
+
+| Zone | Rate | Price | Condition |
+|---|---|---|---|
+| United Kingdom | Royal Mail Tracked 48 | £3.95 | free when order is over £120 |
+| United Kingdom | Royal Mail Tracked 24 | £5.95 | — |
+| Rest of world | by weight | — | as you decide |
+
+**The free-over-£120 threshold must exist as a rate condition**, not only as
+a line in the announcement bar. Add the £3.95 rate, then a second rate at
+£0.00 with a minimum order price of £120.
+
+This is also where the zero weights from the import bite: international
+rates calculate by weight, and every variant currently weighs nothing. Weigh
+one of each style before turning international shipping on.
+
+### Tax — Settings → Taxes and duties
+
+Every product page and the bag say **"Taxes included."** For that to be
+true, prices must be set as tax-inclusive — the setting is under the United
+Kingdom region, "Include tax in prices". Leave it off and VAT is added at
+checkout, so the customer sees a total higher than the one you quoted.
+
+If you are not VAT registered, there is no VAT to include and the wording is
+still fine. Revisit it when you register.
+
+## 10. Upload the film
+
+**Content → Files → Upload** `hanan-story.mp4`, then copy its link.
+
+Shopify does not accept `.mp4` as a theme asset, which is why the film is
+not bundled with the theme. Paste the link into the theme editor, on the
+live theme, under the **Story video** section. Without it, that section
+renders its text half only rather than an empty frame.
+
+## 11. Test a real order before taking real money
 
 This is the step the original README flagged and nothing here replaces it.
+It needs a paid plan — a trial store cannot take a payment, even a test one.
 
 1. Set real prices, real stock and real weights on one product, publish it.
 2. Turn on Shopify Payments **test mode**
    (Settings → Payments → Shopify Payments → Manage → Test mode).
 3. Buy it with a test card. Check the confirmation email, the order in the
-   admin, and that stock went down by one.
+   admin, the shipping charged, and that stock went down by one.
 4. Refund it. Check the refund lands and stock goes back up.
 5. Turn test mode off.
 
-Only then point the domain at Shopify.
+Only then lift the store password and point a domain at Shopify.
 
 ---
 
@@ -469,8 +521,10 @@ Carried over from the build notes, none of them resolved by this move:
 5. **Reviews stay hidden** until they are real. Publishing invented reviews
    breaches UK consumer protection law. The section is off by default and
    the theme editor says so.
-6. **Shipping rates** must be set up to match what the policy promises,
-   including free over £120 as an actual rate condition.
+6. **Shipping weights.** Every variant imported at zero grams, so any
+   weight-based rate — international especially — cannot price correctly
+   until each style is weighed. Step 9 sets the rates up; the weights
+   themselves are yours to measure.
 
 ## The old site
 
