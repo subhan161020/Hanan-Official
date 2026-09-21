@@ -347,6 +347,9 @@ column.
 | Everyday abaya | Collections → Everyday abaya |
 | Occasion abaya | Collections → Occasion abaya |
 
+Shopify seeds this menu with a **Search** item. Delete it — the header has no
+search, so the link goes somewhere the theme does not otherwise offer.
+
 ### Help — handle `help`
 
 Create a new menu, titled exactly **Help**. The footer's second column.
@@ -366,10 +369,13 @@ Re-uploading a zip leaves the superseded version sitting there under a
 near-identical name, so check which one you are opening. Deleting the old
 draft once the new one is live saves picking wrong later.
 
-In the editor: **Footer** in the left panel → the **second** menu column →
-set Heading to `Help` and Menu to `Help` → Save. The theme ships both
-footer columns pointing at `footer`, so until you change this one the Shop
-links appear twice.
+In the editor: **Footer** in the left panel → click the block labelled
+**Menu column – Help** → set **Menu** to `Help` → Save.
+
+Only the Menu needs changing. The theme already names the two columns Shop
+and Help, but points both at the `footer` menu, so the giveaway is a Help
+column with the right heading over the Shop links. Nothing looks broken —
+the links are simply the wrong ones.
 
 ## 8. Paste the policies
 
