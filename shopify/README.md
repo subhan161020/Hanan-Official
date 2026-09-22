@@ -474,12 +474,23 @@ still fine. Revisit it when you register.
 
 ## 10. Upload the film
 
-**Content → Files → Upload** `hanan-story.mp4`, then copy its link.
+**Content → Files → Upload** `hanan-story.mp4`.
 
-Shopify does not accept `.mp4` as a theme asset, which is why the film is
-not bundled with the theme. Paste the link into the theme editor, on the
-live theme, under the **Story video** section. Without it, that section
-renders its text half only rather than an empty frame.
+Yes, Shopify takes MP4 — just not as a *theme asset*. Theme assets allow
+images, CSS, JS and fonts only, which is why the film is not bundled with
+the theme. Files accepts MP4 and MOV up to 1 GB, and the film is about 20 MB.
+
+Then, in the theme editor on the **live** theme, open the **Story video**
+section and pick the film in the **Film** setting. Use the picker, not the
+link field: Shopify transcodes what you upload and serves whichever format
+suits the visitor, and the picker hands the theme every version. The link
+field is a fallback for a film hosted somewhere other than this store.
+
+The poster frame is optional — with none set, the film's own preview frame
+is used, and failing that the one bundled with the theme.
+
+Without a film, the section renders its text half only rather than an empty
+frame.
 
 ## 11. Test a real order before taking real money
 
