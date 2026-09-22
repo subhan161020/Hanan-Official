@@ -428,6 +428,33 @@ maximum on the paid rate makes exactly one of the two appear at a time.
 Tracked 24 carries no condition, so it is offered at every order value as
 the paid upgrade.
 
+**Check £3.95 actually covers the postage before saving it.** That figure
+came across from the original site's draft copy, the same as the product
+prices, and it sits very close to the line.
+
+Royal Mail bands parcels by size, and the band — not the weight — is what
+decides the price here. Small Parcel is **45 × 35 × 16 cm, up to 2 kg**;
+anything over on *any single dimension* becomes a Medium Parcel. As at the
+April 2026 online prices, Tracked 48 was **£3.65** for a Small Parcel and
+**£5.55** for a Medium; Tracked 24 was £4.65 and £6.55. A new Royal Mail
+price guide takes effect in October 2026, so confirm the current figures.
+
+So: Small Parcel leaves about 30p on a £3.95 charge. Medium Parcel loses
+£1.60 on every standard-delivery order, and the whole £5.55 on anything over
+the £120 free-delivery threshold.
+
+**The deciding measurement is the 16 cm depth.** A folded full-length abaya
+with a matching hijab is not obviously under it, and the beaded Jouri is
+bulkier than the linen Riwa. Pack one of each style as you would post it,
+measure the parcel, and set the rates from that. If the styles fall in
+different bands, price for the worst one.
+
+You do not need a Royal Mail contract to get business rates. Their own API
+requires 25,000 parcels a year, which is not you — but Shopify Shipping
+sells labels at its own negotiated rates with no contract and no minimum,
+and Royal Mail's Click & Drop is pay-as-you-go. Evri is usually cheaper if
+the margin turns out tight.
+
 **The other zones need attention or removal.** A zone with no rate tells
 customers there that no delivery is available, at checkout, after they have
 filled in an address. And the import set every variant to zero grams, so a
